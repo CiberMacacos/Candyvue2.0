@@ -1,9 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Headerkoa from './components/Headerkoa.vue'
+import Footerkoa from './components/Footerkoa.vue'
 </script>
 
 <template>
-  
+  <Headerkoa/>
+  <Footerkoa/>
 </template>
-
-

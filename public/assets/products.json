@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Blop Chocolate!",
+    "price": 1.75,
+    "country": "Japan",
+    "description": "Típico pez de chocolate con leche, con un relleno repleto de burbujas que te hará flotar. ¡Ideal para tener un detalle con la persona  que más quieres!",
+    "ingredients": "Azúcar, Leche en polvo, Manteca de cacao, Polvo de cacao, Aceite de Palma, Espesante (E-754).",
+    "allergens": ["Lactosa", "Cacahuetes", "Azúcar"],
+    "image": "./assets/productos/pez.jpeg",
+    "stripeCode": "price_1Mls3uAfWm98wD6CAmlviMlF"
+  },
+  {
+    "id": 2,
+    "name": "Blue Dreams",
+    "price": 1.50,
+    "country": "Japan",
+    "description": "Estos caramelos son la mejor opción para peques… ¡y para los más mayores! No te puedes perder su sabor de algodón de azúcar.",
+    "ingredients": "Azúcar, Lactosa, Extracto de espirulina, Sirope de remolacha, Aroma artificial, Colorante (E-256 y E-876).",
+    "allergens": ["Lactosa", "Azúcar"],
+    "image": "./assets/productos/bluedreams.jpeg",
+    "stripeCode": "price_1Mls5EAfWm98wD6C4GlFlzjc"
+  },
+  {
+    "id": 3,
+    "name": "Fizz Bang",
+    "price": 3.50,
+    "country": "Japan",
+    "description": "Estas pastillas de caramelo mezclan su sabor ácido con un sorprendente efecto refrescante que no te dejará indiferente. Cada paquete contiene 50 unidades de sabores diferentes, entre los que encontrarás algunos tan espectaculares como toffee, lima-limón, menta o algas.",
+    "ingredients": "Jarabe de glucosa, Maltodextrina, Emulgente E-124, Acidulante E-345, Colorantes (E-340, E-122, E-355, E-676).",
+    "allergens": ["Azúcar"],
+    "image": "./assets/productos/fizz.jpg",
+    "stripeCode": "price_1Mls5qAfWm98wD6C3a5NrcgZ"
+  },
+  {
+    "id": 4,
+    "name": "Fizz Bang Matcha",
+    "price": 3.50,
+    "country": "Japan",
+    "description": "Prueba la nueva edición limitada `Té Matcha` de las famosas Fizz Bang. ¡Más japonesas que nunca!",
+    "ingredients": "Jarabe de glucosa, Maltodextrina, Emulgente E-124, Acidulante E-345, Colorantes (E-340, E-355, E-676), Extracto de té verde matcha.",
+    "allergens": ["Azúcar"],
+    "image": "./assets/productos/fizzmatcha.jpeg",
+    "stripeCode": "price_1Mls6VAfWm98wD6CLO016rPp"
+  },
+  {
+    "id": 5,
+    "name": "Hi-Chew",
+    "price": 3.50,
+    "country": "Japan",
+    "description": "Caramelo masticable de larga duración con intenso relleno de frutas con una textura única. Fabricado en Japón desde 1975. Disponible en varios sabores: fruit mix (manzana, uva, mango y fresa), tropical mix (kiwi, piña, mango y pitaya) y sweet&sour (sandía, limón y pomelo).",
+    "ingredients": "Jarabe de glucosa, Azúcar, Aceite de palma, Gelatina, Ácido Cítrico, Saborizante artificial, Extracto de espirulina, Zumo concentrado de frutas, Zumo concentrado de vegetales (color).",
+    "allergens": ["Azúcar", "Soja", "Cacahuetes"],
+    "image": "./assets/productos/chewchew.jpeg",
+    "stripeCode": "price_1Mls9zAfWm98wD6CxqxSSeY8"
+  },
+  {
+    "id": 6,
+    "name": "KitKat",
+    "price": 5.50,
+    "country": "Japan",
+    "description": "Paquete de 12 unidades de Kit Kat Mini con un mix de sabores exclusivos de Japón. Mezcla el típico sabor de su galleta con el recubrimiento de chocolate y tarta de queso, té matcha, fresa o pastel de calabaza.",
+    "ingredients": "Azúcar, Manteca de Cacao, Leche en polvo, Harina de trigo, Levadura, Emulsionante (soja), Aroma, Colorante (E-134, E-435 y E-243), Calabaza en polvo, Bicarbonato de sodio, Zumo concentrado de fresa.",
+    "allergens": ["Lactosa", "Cacahuetes", "Avellanas", "Gluten", "Soja"],
+    "image": "./assets/productos/kitkat.jpeg",
+    "stripeCode": "price_1MlsAVAfWm98wD6CeS0GXFfw"
+  },
+  {
+    "id": 7,
+    "name": "Lingoli",
+    "price": 0.75,
+    "country": "Japan",
+    "description": "Bombón de chocolate relleno de deliciosa galleta crujiente y caramelo líquido. En Japón nunca falta este dulce… ¡y en tu mesa tampoco!",
+    "ingredients": "Azúcar, Leche en polvo, Manteca de cacao, Harina de trigo, Polvo de cacao, Aceite de Palma, Sacarosa, Extracto de vainilla, Emulgente.",
+    "allergens": ["Lactosa", "Cacahuetes", "Avellanas", "Gluten"],
+    "image": "./assets/productos/lingoli.jpeg",
+    "stripeCode": "price_1MlsB1AfWm98wD6CqIpQsLC7"
+  },
+  {
+    "id": 8,
+    "name": "Matcha Hearts",
+    "price": 4.00,
+    "country": "Japan",
+    "description": "Atrévete a probar esta deliciosa caja de bombones (10 unidades) con una fina capa de chocolate con leche y un relleno líquido de té matcha.",
+    "ingredients": "Azúcar, Manteca de cacao, Leche en polvo, Extracto de té verde, Emulsionante (soja), Aroma, Colorante (E-134, E-435 y E-243).",
+    "allergens": ["Lactosa", "Azúcar", "Soja"],
+    "image": "./assets/productos/matchahearts.jpeg",
+    "stripeCode": "price_1MlsBTAfWm98wD6CVUI6VMSd"
+  },
+  {
+    "id": 9,
+    "name": "Zenhou Colors",
+    "price": 2.50,
+    "country": "Japan",
+    "description": "Sumérgete en el corazón de Japón con estos maravillosos caramelos de frutas. Vienen empaquetados en una bolsita con 10 unidades de distintos sabores como melón, uva, frambuesa y melocotón. Ideal para regalo.",
+    "ingredients": "Azúcar, Jarabe de glucosa, Zumo concentrado de frutas (fresa, melón, melocotón, frambuesas y uva), Espesante E-312, Dextrosa, Acidulantes, Colorantes (E-340, E-122, E-764).",
+    "allergens": ["Azúcar"],
+    "image": "./assets/productos/zenhou.jpeg",
+    "stripeCode": "price_1MlsC2AfWm98wD6CnmAflsD5"
+  }
+]
