@@ -18,7 +18,7 @@ export default {
           <h2 class="mb-6 text-sm font-semibold text-blue-400 uppercase">Sobre nosotros</h2>
           <ul class="">
             <li class="mb-4">
-              <a href="info.html" class="hover:underline">Quiénes somos</a>
+              <a href="/src/components/Infokoa.vue" class="hover:underline">Quiénes somos</a>
             </li>
             <li>
               <a href="productList.html" class="hover:underline">Nuestros productos</a>
