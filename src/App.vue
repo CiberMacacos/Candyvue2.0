@@ -1,11 +1,13 @@
 <script setup>
-import Headerkoa from './components/comun/Headerkoa.vue'
-import Footerkoa from './components/comun/Footerkoa.vue'
-import Mainkoa from './components/Mainkoa.vue'
+import Header from './components/Headerkoa.vue'
+import Footer from './components/Footerkoa.vue'
+import router from './router/router.js';
 </script>
 
 <template>
-  <Headerkoa/>
-  <Mainkoa/>
-  <Footerkoa/>
+  <div>
+    <Header />
+    <router />
+    <Footer />
+  </div>
 </template>

@@ -1,11 +1,10 @@
 <script>
 export default {
-  
+  name: 'Home'
 }
 </script>
 
 <template>
-  <Headerkoa/>
   <!--Fondo fresas-->
   <div class="bg-[url('/assets/chuches/fresa.jpeg')] bg-center lg:mt-5 md:w-auto sm:w-full md:h-72 h-36 bg-cover
 bg-no-repeat object-top flex flex-col items-center justify-center">
@@ -98,5 +97,4 @@ bg-no-repeat object-top flex flex-col items-center justify-center">
     }
   </script>
   -->
-  <Footerkoa/>
 </template>

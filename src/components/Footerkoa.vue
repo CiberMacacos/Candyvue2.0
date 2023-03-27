@@ -1,27 +1,21 @@
-<script>
-export default {
-
-}
-</script>
-
 <template>
     <!--Footer-->
     <footer class="bg-blue-200 bg-opacity-40 w-auto p-4">
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
-        <a href="index.html" class="flex items-center">
+        <router-link to="../Mainkoa.vue" class="flex items-center">
           <img src="assets/logo-letras.png" class="h-32 mr-3" alt="Logo CandyKoa" />
-        </a>
+        </router-link>
       </div>
       <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
         <div>
           <h2 class="mb-6 text-sm font-semibold text-blue-400 uppercase">Sobre nosotros</h2>
           <ul class="">
             <li class="mb-4">
-              <a href="/src/components/Infokoa.vue" class="hover:underline">Quiénes somos</a>
+              <router-link to="../Infokoa.vue" class="hover:underline">Quiénes somos</router-link>
             </li>
             <li>
-              <a href="productList.html" class="hover:underline">Nuestros productos</a>
+              <router-link to="" class="hover:underline">Nuestros productos</router-link>
             </li>
           </ul>
         </div>
@@ -39,11 +33,11 @@ export default {
         <div>
           <h2 class="mb-6 text-sm font-semibold text-blue-400 uppercase">Legal</h2>
           <ul class="">
-            <li class="mb-4">
-              <a href="construccion.html" class="hover:underline">Política de privacidad</a>
+            <li class="mb-4" alt="Política de privacidad">
+              <router-link to="../Constructionkoa.vue" class="hover:underline">Política de privacidad</router-link>
             </li>
-            <li>
-              <a href="construccion.html" class="hover:underline">Términos y Condiciones</a>
+            <li class="mb-4" alt="Términos y Condiciones">
+              <router-link to="../Constructionkoa.vue" class="hover:underline">Términos y Condiciones</router-link>
             </li>
           </ul>
         </div>
@@ -51,7 +45,7 @@ export default {
     </div>
     <hr class="my-6 border-blue-300 sm:mx-auto lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm sm:text-center">© 2023 <a href="index.html" class="hover:underline">CandyKoa™</a>. All Rights
+      <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline">CandyKoa™</router-link>. All Rights
         Reserved.
       </span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -70,3 +64,9 @@ export default {
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
