@@ -35,10 +35,10 @@ bg-no-repeat object-top flex flex-col items-center justify-center">
         src="assets/chuches/movil/hi-chew-m.webp" alt="Hi-Chew">
 
       <img
-        class=" hidden md:block h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
+        class=" hidden md:block h-full md:h-32  w-full lg:h-60 w-120 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
         src="assets/chuches/halloween.jpeg" alt="Chocolate">
         <img
-        class=" md:hidden h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
+        class=" md:hidden h-full md:h-32  w-full lg:h-60 w-120 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
         src="assets/chuches/movil/halloween.webp" alt="Chocolate">
       <img
         class="hidden md:block md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
