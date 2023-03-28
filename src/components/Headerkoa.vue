@@ -12,32 +12,32 @@
           <li>
             <router-link to="" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/japanflag.jpeg" alt="Bandera de Japón">
-              <a class="md:hover:text-pink-500" href="productList.html">JAPÓN</a>
+              <span class="md:hover:text-pink-500">JAPÓN</span>
             </router-link>
           </li>
           <li>
-            <router-link to="../Constructionkoa.vue" class="flex flex-col text-center items-center">
+            <router-link to="/construction" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/eeuu.jpeg" alt="Bandera de EEUU">
               <span class="md:hover:text-pink-500">EEUU</span>
             </router-link>
           </li>
           <li>
-            <router-link to="../Constructionkoa.vue" class="flex flex-col text-center items-center">
+            <router-link to="/construction" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/mexico.jpeg" alt="Bandera de México">
-              <a class="md:hover:text-pink-500" href="construccion.html">MÉXICO</a>
+              <span class="md:hover:text-pink-500">MÉXICO</span>
             </router-link>
           </li>
           <li>
-            <router-link to="../Constructionkoa.vue" class="flex flex-col text-center items-center">
+            <router-link to="/construction" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/europe.jpeg" alt="Bandera de Europa">
-              <a class="md:hover:text-pink-500" href="construccion.html">EUROPA</a>
+              <span class="md:hover:text-pink-500">EUROPA</span>
             </router-link>
           </li>
         </ul>
       </div>
     </nav>
     <!--Logo CandyKoa del header-->
-    <router-link to="../Mainkoa.vue" class="flex flex-col items-center md:items-center md:relative translate-y-12 md:top-4">
+    <router-link to="/" class="flex flex-col items-center md:items-center md:relative translate-y-12 md:top-4">
       <img class="w-36 h-auto md:w-56 md:h-auto" src="assets/logo-letras.png" alt="Logo">
     </router-link>
     <div class="flex justify-end my-24 mx-4 md:absolute md:top-5 md:right-5 md:m-0">

@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Mainkoa from '../views/Mainkoa.vue'
 import Infokoa from '../views/Infokoa.vue'
 import Constructionkoa from '../views/Constructionkoa.vue'
-import Footerkoa from '../components/Footerkoa.vue'
+
 
 
 const routes = [
