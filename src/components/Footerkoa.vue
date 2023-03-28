@@ -1,6 +1,6 @@
 <template>
-    <!--Footer-->
-    <footer class="bg-blue-200 bg-opacity-40 w-auto p-4">
+  <!--Footer-->
+  <footer class="bg-blue-200 bg-opacity-40 w-auto p-4">
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
         <router-link to="/" class="flex items-center">
@@ -45,7 +45,8 @@
     </div>
     <hr class="my-6 border-blue-300 sm:mx-auto lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline">CandyKoa™</router-link>. All Rights
+      <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue"
+          class="hover:underline">CandyKoa™</router-link>. All Rights
         Reserved.
 
       </span>
@@ -58,8 +59,7 @@
             alt="Instagram" />
         </a>
         <a href="https://twitter.com/CandyKoa_" target="_blank" class="text-white">
-          <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="assets/icon/twitter2.webp"
-            alt="Instagram" />
+          <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="assets/icon/twitter2.webp" alt="Instagram" />
         </a>
       </div>
     </div>

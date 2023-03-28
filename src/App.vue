@@ -1,7 +1,7 @@
 <script setup>
 import Header from './components/Headerkoa.vue'
 import Footer from './components/Footerkoa.vue'
-import router from './router/router.js';
+import router from './router/router.js'
 </script>
 
 <template>

@@ -7,7 +7,7 @@ export default {
 <template>
   <!--Fondo fresas-->
   <div class="bg-[url('/assets/chuches/fresa.jpeg')] bg-center lg:mt-5 md:w-auto sm:w-full md:h-72 h-36 bg-cover
-bg-no-repeat object-top flex flex-col items-center justify-center">
+  bg-no-repeat object-top flex flex-col items-center justify-center">
     <div class="flex flex-col gap-5 md:gap-20">
       <p class="text-center font-bold lg:text-4xl md:text-2xl text-white p-1 rounded-xl bg-pink-600 bg-opacity-50">
         ¡La desconexión que necesitas a sólo un click!
@@ -36,7 +36,7 @@ bg-no-repeat object-top flex flex-col items-center justify-center">
       <img
         class=" hidden md:block h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
         src="assets/chuches/halloween.jpeg" alt="Chocolate">
-        <img
+      <img
         class=" md:hidden h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover md:hover:scale-110 md:hover:ease-linear duration-100 md:hover:contrast-125"
         src="assets/chuches/movil/halloween.webp" alt="Chocolate">
       <img
@@ -84,17 +84,18 @@ bg-no-repeat object-top flex flex-col items-center justify-center">
   <div class="flex flex-col justify-center items-center m-5 gap-6 md:m-10">
     <h1 class="self-start text-sm md:text-lg md:text-pink-800 font-bold">Productos recomendados</h1>
     <!--Productos-->
-    <div id="recomended" class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
-        <!--Productos-->
-      </div>
-    </div>
-  <!--Script de Javascript para el menú de móvil - No funciona aún-->
-  <!--
+    <div id="recomended"
+    class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
+    <!--Productos-->
+  </div>
+</div>
+<!--Script de Javascript para el menú de móvil - No funciona aún-->
+<!--
   <script>
-    function Menu(e){
-      let list = document.querySelector('ul');
-      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-    }
-  </script>
-  -->
+      function Menu(e){
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+      }
+    </script>
+    -->
 </template>
