@@ -2,7 +2,7 @@
   <body class="bg-cyan-50 bg-cover w-full h-full">
     <div class="flex flex-col items-center h-full">
       <div class="">
-        <img src="assets//logo-enconstruccion.png" alt="CandyKoa" class="w-64 md:w-80">
+        <img src="assets/logo-enconstruccion.png" alt="CandyKoa" class="w-64 md:w-80">
       </div>
       <div class="flex flex-col gap-3 text-center mx-2 md:gap-5">
         <h2 class="text-center text-3xl md:text-6xl font-semibold">En construcción</h2>
