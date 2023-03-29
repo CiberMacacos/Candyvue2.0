@@ -1,4 +1,5 @@
 <script>
+import {getRandomProduct} from "../modules/getRandomProduct.js"
 export default {
   name: "ProductCard",
 
@@ -8,12 +9,14 @@ export default {
     price: { type: Number },
     image: { type: String },
   },
+  
   data() {
     return {
 
     }
   },
   methods: {
+   
   },
   computed: {
     url (){
