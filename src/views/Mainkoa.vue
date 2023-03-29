@@ -1,6 +1,8 @@
 <script>
+import ProductCard from '../components/ProductCard.vue'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {ProductCard},
 }
 </script>
 
@@ -87,6 +89,7 @@ export default {
     <div id="recomended"
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
+    <ProductCard name="osito" :id="3" image="./assets/productos/kitkat.jpeg" :price="3.75"/>
   </div>
 </div>
 <!--Script de Javascript para el menú de móvil - No funciona aún-->
