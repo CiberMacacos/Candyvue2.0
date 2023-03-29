@@ -1,10 +1,18 @@
 <script>
+import Breadcrumbs from '@/components/Breadcrumbs.vue'
 export default {
-  name: 'ProductList'
+  name: 'ProductList',
+  components: { Breadcrumbs },
 }
 </script>
 
 <template>
+  <Breadcrumbs :items="[
+    {disabled: false, text: 'Uno' , to: '/ruta/' },
+    {disabled: false, text: 'Dos' , to: '/ruta/' },
+    {disabled: false, text: 'Tres' , to: '/ruta/' },
+    {disabled: false, text: 'Cuatro' , to: '/ruta/' }
+    ]" />
   <!-- Tarjetas de Productos -->
   <div class="flex lg:justify-center justify-center">
     <div
