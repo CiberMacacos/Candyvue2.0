@@ -7,7 +7,7 @@ export default {
   components: { Breadcrumbs, ProductCard },
   data(){
     return{
-      products: getProducts()
+      products:[]
     }
   },
   methods: {
@@ -16,12 +16,17 @@ export default {
       for(let i=0; i<json.length; i++){
         products.push(json[i])
       }
+      this.products=products
       console.log(products)
-      return products
     }
   },
+  mounted() {
+    this.getProducts()
+  }
 
 }
+
+
 </script>
 
 <template>
