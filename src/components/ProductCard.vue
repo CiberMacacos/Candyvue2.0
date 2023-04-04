@@ -1,5 +1,4 @@
 <script>
-import { getRandomProduct } from "../modules/getRandomProduct.js"
 export default {
   name: "ProductCard",
 

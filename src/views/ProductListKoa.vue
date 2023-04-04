@@ -1,34 +1,18 @@
 <script>
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import ProductCard from '../components/ProductCard.vue';
-//import json from "../assets/products.json";
 import { useProductList } from "../productsStore.js"
 export default {
   name: 'ProductList',
   setup() {
     const prod = useProductList();
-    prod.getData();
     return { prod }
   },
   components: { Breadcrumbs, ProductCard },
   data() {
     return {
-
     }
   },
-  //methods: {
-  /*getProducts() {
-    const products = []
-    for (let i = 0; i < json.length; i++) {
-      products.push(json[i])
-    }
-    this.products = products
-    console.log(products)*/
-  // }
-  //},
-  /*mounted() {
-    this.getProducts()
-  }*/
 }
 </script>
 

@@ -1,14 +1,31 @@
-<script setup>
+<script>
 import Header from './components/Headerkoa.vue'
 import Footer from './components/Footerkoa.vue'
 import router from './router/router.js'
+import { useProductList } from './productsStore.js'
+
+
+export default{
+ setup() {
+    const prod = useProductList()
+    //prod.getData()
+    prod.getRandomProduct()
+   },
+   created:{
+    
+   },
+   components:{
+    Header, Footer
+   }
+ }
+ 
 </script>
 
 <template>
   <div>
-    <Header />
-    <router />
+    <Header/>
+    <router/>
     <router-view></router-view>
-    <Footer />
+    <Footer/>
   </div>
 </template>
