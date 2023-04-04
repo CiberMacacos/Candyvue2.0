@@ -1,5 +1,5 @@
 <script>
-import {getRandomProduct} from "../modules/getRandomProduct.js"
+import { getRandomProduct } from "../modules/getRandomProduct.js"
 export default {
   name: "ProductCard",
 
@@ -19,8 +19,8 @@ export default {
 
   },
   computed: {
-    url (){
-      return "details.html?id=" + this.id;
+    url() {
+      return "DetailProductkoa.vue?id=" + this.id;
     }
   }
 
@@ -28,28 +28,26 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-col lg:flex-row lg:gap-9 md:gap-3 gap-3 md:w-48 md:h-48 lg:w-full lg:h-72">
-
-    <div
-      class="flex flex-row md:flex-col lg:flex-col gap-2 items-center border-1 lg:text-center border-gray-100 rounded-lg shadow-lg lg:shadow-xl lg:w-60 lg:h-72 lg:hover:scale-110 md:hover:scale-110 md:hover:ease-linear duration-150 ease-in">
+  <div class="flex flex-row md:flex-col lg:flex-row lg:gap-9 md:gap-3 md:w-48 md:h-48 lg:w-full lg:h-72">
+    <router-link to="/detailproduct"
+      class="w-56 flex flex-row md:flex-col lg:flex-col gap-3 items-center border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl lg:w-60 lg:h-72 lg:hover:scale-110 md:hover:scale-110 md:hover:ease-linear duration-150 ease-in">
       <img
-        class="w-20 h-20 md:w-full lg:w-full md:h-full lg:h-48 rounded-l-lg md:rounded-t-lg md:rounded-bl-none lg:rounded-t-lg lg:rounded-bl-none"
+        class="w-20 h-20 md:w-full md:h-40 lg:w-full lg:h-48 rounded-l-lg md:rounded-t-lg md:rounded-bl-none lg:rounded-t-lg lg:rounded-bl-none"
         :src="image" :alt="name">
-        <div class="flex flex-row items-center flex-end">
-      <div class="flex flex-col lg:p-4 gap-2">
-        <h1><a class="font-bold text-left p-3"
-            :href="url">{{ name }}</a></h1>
-        <h3 class="font-semibold">{{ price }}€</h3>
-      </div>
-        <div class="w-auto flex justify-end ml-12 md:ml-2 lg:ml-20 ">
-        <img id="addButton" data-value="" data-image="" data-name="" data-price="" data-code=""
-          class="w-8 h-8 md:w-8 md:h-8 cursor-pointer hover:invert"
-          src="assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
+      <div class="flex flex-row items-center flex-end justify-end">
+        <div class="flex flex-col sm:w-32 md:w-48 lg:p-4 ">
+          <h1 class="w-16 sm:w-16 md:w-auto lg:w-auto ml-2"><a class="font-bold text-left text-sm sm:text-sm" :href="url">{{
+            name }}</a></h1>
+          <h3 class="font-semibold text-xs sm:text-sm ml-2  mb-2">{{ price }}€</h3>
         </div>
+        <div class="w-auto flex justify-end ml-3 sm:ml-0 sm:mr-4 md:mr-2 lg:ml-4">
+          <img id="addButton" data-value="" data-image="" data-name="" data-price="" data-code=""
+            class="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 cursor-pointer hover:invert"
+            src="assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
         </div>
       </div>
-    </div>
-
+    </router-link>
+  </div>
 </template>
 
 <style>

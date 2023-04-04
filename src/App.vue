@@ -7,9 +7,7 @@ import router from './router/router.js'
 <template>
   <div>
     <Header />
-    <p>
-      <router />
-    </p>
+    <router />
     <router-view></router-view>
     <Footer />
   </div>

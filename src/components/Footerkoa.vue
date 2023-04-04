@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
+
 <template>
   <!--Footer-->
   <footer class="bg-blue-200 bg-opacity-40 w-auto p-4">
@@ -65,9 +71,3 @@
     </div>
   </footer>
 </template>
-
-<script>
-export default {
-  name: 'Footer'
-}
-</script>

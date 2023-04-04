@@ -1,10 +1,18 @@
 <script>
+import Breadcrumbs from '@/components/Breadcrumbs.vue'
 export default {
+  name: 'DetailProduct',
+  components: { Breadcrumbs },
 
 }
 </script>
 
 <template>
+  <Breadcrumbs :items="[
+    {disabled: false, text: 'Principal' , to: '/' },
+    {disabled: false, text: 'Japón' , to: '/productlist' },
+    {disabled: false, text: 'Producto' , to: '/detailproduct' },
+    ]" />
   <!--Info-producto:img, texto, precio-->
   <!--Padre de producto-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">
