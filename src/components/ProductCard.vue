@@ -47,7 +47,7 @@ export default {
         </div>
       </div>
     </router-link>
-  </div>
+    </div>
 </template>
 
 <style>
