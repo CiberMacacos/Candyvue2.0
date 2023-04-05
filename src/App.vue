@@ -8,8 +8,7 @@ import { useProductList } from './productsStore.js'
 export default{
  setup() {
     const prod = useProductList()
-    //prod.getData()
-    prod.getRandomProduct()
+    prod.getData()
    },
    created:{
     

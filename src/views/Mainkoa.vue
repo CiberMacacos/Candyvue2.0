@@ -3,11 +3,31 @@ import ProductCard from '../components/ProductCard.vue'
 import { useProductList } from '../productsStore.js';
 export default {
   name: 'Home',
-  setup() {
+  mounted () {
     const prod = useProductList()
     return { prod }
   },
-  components: {ProductCard}
+  data() {
+    return {
+      prod:this.prod.productList
+    }
+  },
+  components: {ProductCard},
+  methods: {
+    getRandomProduct() {
+    const chosenProducts=[];
+    const chosenNumbers=[];
+    while (chosenProducts.length<4) {
+    const randomNumber= Math.floor(Math.random()*this.prod.productList.length); 
+    if(!chosenNumbers.includes(randomNumber)){    
+    chosenNumbers.push(randomNumber);    
+    chosenProducts.push(this.prod.productList[randomNumber]);
+    return chosenProducts
+        }
+      }
+    }
+  },
+
 }
 </script>
 
@@ -94,17 +114,9 @@ export default {
     <div id="recomended"
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
-    <ProductCard v-for="product in prod.chosenProducts" :name="product.name" :id="product.id" :image="product.image"
+    <ProductCard v-for="product in prod" :name="product.name" :id="product.id" :image="product.image"
     :price="product.price" />
   </div>
 </div>
 <!--Script de Javascript para el menú de móvil - No funciona aún-->
-<!--
-  <script>
-      function Menu(e){
-        let list = document.querySelector('ul');
-        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-      }
-    </script>
-    -->
 </template>
