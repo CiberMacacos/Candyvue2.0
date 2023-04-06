@@ -6,13 +6,11 @@ import { useProductList } from './productsStore.js'
 
 
 export default{
- setup() {
+ mounted() {
     const prod = useProductList()
     prod.getData()
    },
-   created:{
-    
-   },
+   
    components:{
     Header, Footer
    }

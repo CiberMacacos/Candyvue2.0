@@ -1,17 +1,17 @@
 <script>
 import ProductCard from '../components/ProductCard.vue'
-import { useProductList } from '../productsStore.js';
+// import { useProductList } from '../productsStore.js';
 export default {
-  name: 'Home',
-  mounted () {
-    const prod = useProductList()
-    return { prod }
-  },
-  data() {
-    return {
-      prod:this.prod.productList
-    }
-  },
+  // name: 'Home',
+  // mounted () {
+  //   const prod = useProductList()
+  //   return { prod }
+  // },
+  // data() {
+  //   return {
+  //     prod:this.prod.productList
+  //   }
+  // },
   components: {ProductCard},
   methods: {
     getRandomProduct() {
@@ -114,8 +114,8 @@ export default {
     <div id="recomended"
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
-    <ProductCard v-for="product in prod" :name="product.name" :id="product.id" :image="product.image"
-    :price="product.price" />
+    <!-- <ProductCard v-for="product in prod" :name="product.name" :id="product.id" :image="product.image"
+    :price="product.price" /> -->
   </div>
 </div>
 <!--Script de Javascript para el menú de móvil - No funciona aún-->
