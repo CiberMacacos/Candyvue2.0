@@ -1,16 +1,16 @@
 <script>
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import ProductCard from '../components/ProductCard.vue';
-import { useProductList } from "../productsStore.js"
+import { useProductStore } from "../productsStore.js"
+
 export default {
+
   name: 'ProductList',
-  setup() {
-    const prod = useProductList();
-    return { prod }
-  },
-  components: { Breadcrumbs, ProductCard },
+  
+  components: { Breadcrumbs,ProductCard },
   data() {
     return {
+      prod: useProductStore()
     }
   },
 }

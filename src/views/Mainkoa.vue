@@ -1,33 +1,44 @@
 <script>
 import ProductCard from '../components/ProductCard.vue'
-// import { useProductList } from '../productsStore.js';
+import { useProductStore } from '../productsStore.js';
 export default {
-  // name: 'Home',
-  // mounted () {
-  //   const prod = useProductList()
-  //   return { prod }
-  // },
-  // data() {
-  //   return {
-  //     prod:this.prod.productList
-  //   }
-  // },
-  components: {ProductCard},
-  methods: {
-    getRandomProduct() {
-    const chosenProducts=[];
-    const chosenNumbers=[];
-    while (chosenProducts.length<4) {
-    const randomNumber= Math.floor(Math.random()*this.prod.productList.length); 
-    if(!chosenNumbers.includes(randomNumber)){    
-    chosenNumbers.push(randomNumber);    
-    chosenProducts.push(this.prod.productList[randomNumber]);
-    return chosenProducts
-        }
-      }
+  name: 'Home',
+  mounted () {
+    // this.getRandomProduct()
+    
+  },
+  data() {
+    return {
+      prod: useProductStore(),
+      recommended:[]
     }
   },
+  components: {ProductCard},
+  
+  // methods: {
+  //   getRandomProduct() {
 
+  //     // console.log("longitud "+this.prod.productList.length)
+  //     // console.log("hola")
+
+  //   const chosenProducts=[];
+  //   const chosenNumbers=[];
+    
+  //   while (chosenProducts.length<=3) {
+  //   let randomNumber = Math.floor(Math.random()*this.prod.productList.length); 
+    
+  //   // console.log("numero aleatorio "+randomNumber);
+  //   // console.log("productList "+this.prod.productList)
+  //   if(!chosenNumbers.includes(randomNumber)){    
+  //     chosenNumbers.push(randomNumber);    
+  //     chosenProducts.push(this.prod.productList[randomNumber]);
+
+  //       }
+  //     } 
+  //     this.recommended=chosenProducts
+  //     // console.log("array de productos "+chosenProducts)
+  //   }
+  // }
 }
 </script>
 
@@ -114,8 +125,8 @@ export default {
     <div id="recomended"
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
-    <!-- <ProductCard v-for="product in prod" :name="product.name" :id="product.id" :image="product.image"
-    :price="product.price" /> -->
+    <ProductCard v-for="product in recommended" :name="product.name" :id="product.id" :image="product.image"
+    :price="product.price" />
   </div>
 </div>
 <!--Script de Javascript para el menú de móvil - No funciona aún-->

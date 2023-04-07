@@ -2,13 +2,14 @@
 import Header from './components/Headerkoa.vue'
 import Footer from './components/Footerkoa.vue'
 import router from './router/router.js'
-import { useProductList } from './productsStore.js'
+import { useProductStore } from './productsStore.js'
 
 
 export default{
  mounted() {
-    const prod = useProductList()
+    const prod = useProductStore()
     prod.getData()
+
    },
    
    components:{
