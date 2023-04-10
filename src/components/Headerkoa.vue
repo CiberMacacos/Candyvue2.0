@@ -1,3 +1,17 @@
+  <script>
+  export default {
+    name: 'Header',
+    mounted(){
+    
+    },
+    computed: {
+    // setProductListUrl() {
+    //   return "/productlist?country=" + this.country;
+    // },
+  }
+}
+</script>
+
 <template>
   <header class="bg-[url('/assets/chuches/nubes.jpg')] bg-center md:w-auto lg:w-auto w-full h-96 bg-cover
     bg-no-repeat object-top">
@@ -9,25 +23,25 @@
         <!--Categorías menú-->
         <ul class="flex md:flex-row flex-row justify-center mt-5 items-center md:items-center md:gap-10 gap-4 text-black">
           <li>
-            <router-link to="/productlist" class="flex flex-col text-center items-center">
+            <router-link to="/productlist?country=japan" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/japanflag.jpeg" alt="Bandera de Japón">
               <span class="md:hover:text-pink-500">JAPÓN</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/construction" class="flex flex-col text-center items-center">
+            <router-link to="/productlist?country=eeuu" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/eeuu.jpeg" alt="Bandera de EEUU">
               <span class="md:hover:text-pink-500">EEUU</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/construction" class="flex flex-col text-center items-center">
+            <router-link to="/productlist?country=mexico" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/mexico.jpeg" alt="Bandera de México">
               <span class="md:hover:text-pink-500">MÉXICO</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/construction" class="flex flex-col text-center items-center">
+            <router-link to="/productlist?country=europe" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/europe.jpeg" alt="Bandera de Europa">
               <span class="md:hover:text-pink-500">EUROPA</span>
             </router-link>
@@ -45,8 +59,3 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: 'Header'
-}
-</script>

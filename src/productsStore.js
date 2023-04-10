@@ -4,35 +4,30 @@ import { db } from '../src/firebase.js'
 
 export const useProductStore = defineStore('productList', {
   state: () => ({
-    productList: []
+    productList: [],
+    filterList:[]
   }),
   actions: {
     async getData() {
-      console.log("getDATA")
       const res = query(collection(db, "products"));
-      console.log("res "+res.value)
       const querySnapshot = await getDocs(res);
-      console.log("querysnapcshot "+ querySnapshot)
       querySnapshot.forEach((doc) => {
-        console.log("bucle")
         let product = doc.data();
         product.id = doc.id;
         this.productList.push(product)
-        console.log(this.productList)
       }
       )
-      console.log("terminado")
 },
+},
+getters:{
 
-    filterProductList(country){
-
-    },
-    showDetails(id){
-      
-    }
-    }
+filterProductList(){
+  const hola=this.productList.filter(product => product.country==='japan')
+  this.filterList=hola
+  return this.filterList
+//temp1.filter(product => product.country =='japan'); 
   }
-
-      // array.filter(e => (e.length < 2));
+}
+  }
 );
 

@@ -10,9 +10,15 @@ export default {
   components: { Breadcrumbs,ProductCard },
   data() {
     return {
-      prod: useProductStore()
+  
     }
   },
+  mounted:{
+  
+  },
+  computed: {
+  
+  }, 
 }
 </script>
 
@@ -27,7 +33,7 @@ export default {
     <div
       class="grid grid-col-1 justify-center sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-24 lg:w-7/12 md:gap-14 lg:my-16 mx-8 my-16"
       id="container">
-      <ProductCard v-for="product in prod.productList" :name="product.name" :id="product.id" :image="product.image"
+      <ProductCard v-for="product in prod." :name="product.name" :id="product.id" :image="product.image"
         :price="product.price" />
     </div>
   </div>
