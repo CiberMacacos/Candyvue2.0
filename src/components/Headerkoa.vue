@@ -3,12 +3,7 @@
     name: 'Header',
     mounted(){
     
-    },
-    computed: {
-    // setProductListUrl() {
-    //   return "/productlist?country=" + this.country;
-    // },
-  }
+    }
 }
 </script>
 

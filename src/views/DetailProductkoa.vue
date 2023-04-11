@@ -1,9 +1,31 @@
 <script>
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
+import { useProductStore } from '../productsStore'
+import { mapState } from 'pinia'
+
 export default {
   name: 'DetailProduct',
   components: { Breadcrumbs },
+  
+  computed: {
+...mapState(useProductStore,['productList']),
 
+  getId(){
+    console.log("hola")
+    let url= window.location.href
+    url=url.split('?')
+    return url[1]
+  },
+
+  filterDetails(id){
+    console.log("hola2")
+    id=this.getId
+    console.log(id)
+    const filtered= this.productList.filter(product => product.id===id)
+    console.log(filtered)
+    return  filtered[0]
+  }
+  }
 }
 </script>
 
@@ -14,6 +36,14 @@ export default {
     {disabled: false, text: 'Producto' , to: '/detailproduct' },
     ]" />
   <!--Info-producto:img, texto, precio-->
+
+  <!-- <p>{{ this.filterDetails.name }}</p>
+  <img :src=this.filterDetails.image alt="">
+  <p>{{ this.filterDetails.price }}</p>
+  <p>{{ this.filterDetails.description }}</p>
+  <p>{{ this.filterDetails.ingredients }}</p>
+  <p> {{ this.filterDetails.allergens }}</p> -->
+
   <!--Padre de producto-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">
 

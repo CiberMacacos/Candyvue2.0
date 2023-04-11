@@ -1,44 +1,32 @@
 <script>
 import ProductCard from '../components/ProductCard.vue'
-import { useProductStore } from '../productsStore.js';
+import { useProductStore } from '../productsStore';
+import { mapState } from 'pinia';
 export default {
   name: 'Home',
-  mounted () {
-    // this.getRandomProduct()
-    
-  },
-  data() {
-    return {
-      prod: useProductStore(),
-      recommended:[]
-    }
-  },
+
   components: {ProductCard},
   
-  // methods: {
-  //   getRandomProduct() {
+  computed: {
+    ...mapState(useProductStore,['productList']),
+    getRandomProduct() {
 
-  //     // console.log("longitud "+this.prod.productList.length)
-  //     // console.log("hola")
-
-  //   const chosenProducts=[];
-  //   const chosenNumbers=[];
+    const chosenProducts=[];
+    const chosenNumbers=[];
     
-  //   while (chosenProducts.length<=3) {
-  //   let randomNumber = Math.floor(Math.random()*this.prod.productList.length); 
-    
-  //   // console.log("numero aleatorio "+randomNumber);
-  //   // console.log("productList "+this.prod.productList)
-  //   if(!chosenNumbers.includes(randomNumber)){    
-  //     chosenNumbers.push(randomNumber);    
-  //     chosenProducts.push(this.prod.productList[randomNumber]);
+    while (chosenNumbers.length<=3) {
+      console.log("bucle:()")
+    let randomNumber = Math.floor(Math.random()*39); 
 
-  //       }
-  //     } 
-  //     this.recommended=chosenProducts
-  //     // console.log("array de productos "+chosenProducts)
-  //   }
-  // }
+    if(!chosenNumbers.includes(randomNumber)){    
+      chosenNumbers.push(randomNumber);    
+      chosenProducts.push(this.productList[randomNumber]);
+        }
+      } 
+      console.log(chosenProducts)
+      return chosenProducts
+    }
+  }
 }
 </script>
 
@@ -125,8 +113,8 @@ export default {
     <div id="recomended"
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
-    <ProductCard v-for="product in recommended" :name="product.name" :id="product.id" :image="product.image"
-    :price="product.price" />
+     <ProductCard v-for="product in getRandomProduct" :name="product.name" :id="product.id" :image="product.image"
+    :price="product.price" />  
   </div>
 </div>
 <!--Script de Javascript para el menú de móvil - No funciona aún-->

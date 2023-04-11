@@ -9,7 +9,6 @@ export default{
     const prod = useProductStore()
     prod.getData()
     console.log(prod.productList)
-
    },
    
    components:{

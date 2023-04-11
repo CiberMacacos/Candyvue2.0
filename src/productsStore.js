@@ -4,8 +4,7 @@ import { db } from '../src/firebase.js'
 
 export const useProductStore = defineStore('productList', {
   state: () => ({
-    productList: [],
-    filterList:[]
+    productList: []
   }),
   actions: {
     async getData() {
@@ -19,15 +18,12 @@ export const useProductStore = defineStore('productList', {
       )
 },
 },
-getters:{
+// getters:{
 
-filterProductList(){
-  const hola=this.productList.filter(product => product.country==='japan')
-  this.filterList=hola
-  return this.filterList
-//temp1.filter(product => product.country =='japan'); 
-  }
-}
+// filterProductList(country){
+//   return this.productList.filter(product => product.country==='Japan')
+//   }
+// }
   }
 );
 
