@@ -36,7 +36,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/productlist?country=europe" class="flex flex-col text-center items-center">
+            <router-link to="/productlist?country=europa" class="flex flex-col text-center items-center">
               <img class="w-9 h-auto" src="assets/icon/europe.jpeg" alt="Bandera de Europa">
               <span class="md:hover:text-pink-500">EUROPA</span>
             </router-link>

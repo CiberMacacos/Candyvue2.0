@@ -20,7 +20,8 @@ export default {
     getCountry(){
       let url= window.location.href
       url=url.split('?')
-      return url[1]
+      let country = url[1].split('=')
+      return country[1]
     },
 
     filterProductList(country){
