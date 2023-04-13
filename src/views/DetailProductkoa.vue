@@ -1,32 +1,55 @@
 <script>
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
+import ProductCard from '../components/ProductCard.vue'
 import { useProductStore } from '../productsStore'
 import { mapState } from 'pinia'
 
 export default {
   name: 'DetailProduct',
-  components: { Breadcrumbs },
+  components: { Breadcrumbs, ProductCard },
+  props: {
+    id: {
+      type: String,
+      default: ''
+    },
+  },
+  data() {
+    return {
+      data:''
+    }
+  },
+  beforeMount () {
+    const filtered= this.productList.filter(product => product.id==this.id)
+    this.data=  filtered[0]
+  },
   
-  computed: {
-...mapState(useProductStore,['productList']),
 
-  getId(){
-    console.log("hola")
-    let url= window.location.href
-    url=url.split('?')
-    return url[1]
+  computed: {
+    ...mapState(useProductStore,['productList']),
+    getRandomProduct(){
+    if(!this.productList||this.productList.length===0){
+      return []
+    }
+  const chosenProducts=[];
+  const chosenNumbers=[];
+
+  while (chosenNumbers.length<=3) {
+    
+  let randomNumber = Math.floor(Math.random()*36); 
+
+  if(!chosenNumbers.includes(randomNumber)){    
+    chosenNumbers.push(randomNumber);    
+    chosenProducts.push(this.productList[randomNumber]);
+      }
+    } 
+    console.log(this.productList)
+    console.log("chosenproducts"+chosenProducts)
+    return chosenProducts
+    }
   },
 
-  filterDetails(id){
-    console.log("hola2")
-    id=this.getId
-    console.log(id)
-    const filtered= this.productList.filter(product => product.id===id)
-    console.log(filtered)
-    return  filtered[0]
   }
-  }
-}
+
 </script>
 
 <template>
@@ -37,12 +60,12 @@ export default {
     ]" />
   <!--Info-producto:img, texto, precio-->
 
-  <!-- <p>{{ this.filterDetails.name }}</p>
-  <img :src=this.filterDetails.image alt="">
-  <p>{{ this.filterDetails.price }}</p>
-  <p>{{ this.filterDetails.description }}</p>
-  <p>{{ this.filterDetails.ingredients }}</p>
-  <p> {{ this.filterDetails.allergens }}</p> -->
+  <p>{{ this.data.name }}</p>
+  <img :src=this.data.image alt="">
+  <p>{{ this.data.price }}</p>
+  <p>{{ this.data.description }}</p>
+  <p>{{ this.data.ingredients }}</p>
+  <p> {{ this.data.allergens }}</p>
 
   <!--Padre de producto-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">
@@ -68,6 +91,8 @@ export default {
   <div id="recomended"
     class="flex flex-col sm:flex-col lg:flex-row lg:gap-10 gap-7 md:gap-3 md:h-96 lg:mt-5 mb-10 w-auto">
     <!--Productos-->
+    <ProductCard v-if="getRandomProduct" v-for="product in getRandomProduct" :name="product.name" :id="product.id" :image="product.image"
+    :price="product.price" />
   </div>
 </div>
 </template>

@@ -9,6 +9,12 @@ export default {
   name: 'ProductList',
   
   components: { Breadcrumbs,ProductCard },
+  props: {
+    country: {
+      type: String,
+      default: ''
+    },
+  },
   data() {
     return {
     }
@@ -17,16 +23,8 @@ export default {
 
     ...mapState(useProductStore,['productList']),
 
-    getCountry(){
-      let url= window.location.href
-      url=url.split('?')
-      let country = url[1].split('=')
-      return country[1]
-    },
-
-    filterProductList(country){
-      country=this.getCountry
-      return this.productList.filter(product => product.country===country)
+    filterProductList(){
+      return this.productList.filter(product => product.country===this.country)
     },
   }
 }

@@ -6,27 +6,34 @@ export default {
   name: 'Home',
 
   components: {ProductCard},
-  
+  data() {
+    return {
+    }
+  },
   computed: {
     ...mapState(useProductStore,['productList']),
-    getRandomProduct() {
-
-    const chosenProducts=[];
-    const chosenNumbers=[];
-    
-    while (chosenNumbers.length<=3) {
-      console.log("bucle:()")
-    let randomNumber = Math.floor(Math.random()*39); 
-
-    if(!chosenNumbers.includes(randomNumber)){    
-      chosenNumbers.push(randomNumber);    
-      chosenProducts.push(this.productList[randomNumber]);
-        }
-      } 
-      console.log(chosenProducts)
-      return chosenProducts
+    getRandomProduct(){
+    if(!this.productList||this.productList.length===0){
+      return []
     }
-  }
+  const chosenProducts=[];
+  const chosenNumbers=[];
+
+  while (chosenNumbers.length<=3) {
+    
+  let randomNumber = Math.floor(Math.random()*36); 
+
+  if(!chosenNumbers.includes(randomNumber)){    
+    chosenNumbers.push(randomNumber);    
+    chosenProducts.push(this.productList[randomNumber]);
+      }
+    } 
+    console.log(this.productList)
+    console.log("chosenproducts"+chosenProducts)
+    return chosenProducts
+    }
+  },
+  
 }
 </script>
 
@@ -113,7 +120,7 @@ export default {
     <div id="recomended"
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
-     <ProductCard v-for="product in getRandomProduct" :name="product.name" :id="product.id" :image="product.image"
+    <ProductCard v-if="getRandomProduct" v-for="product in getRandomProduct" :name="product.name" :id="product.id" :image="product.image"
     :price="product.price" />  
   </div>
 </div>

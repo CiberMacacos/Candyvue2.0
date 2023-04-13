@@ -4,7 +4,7 @@ import Mainkoa from "../views/Mainkoa.vue"
 import Infokoa from "../views/Infokoa.vue"
 import Constructionkoa from "../views/Constructionkoa.vue"
 import Cartkoa from "../views/Cartkoa.vue"
-import ProductListkoa from "../views/ProductListKoa.vue"
+
 import DetailProductkoa from "../views/DetailProductkoa.vue"
 
 const routes = [
@@ -29,12 +29,14 @@ const routes = [
     component: Cartkoa,
   },
   {
-    path: "/productlist",
+    path: "/productlist/:country",
+    props:true,
     name: "ProductList",
-    component: ProductListkoa,
+    component: () => import('../views/ProductListKoa.vue')
   },
   {
-    path: "/detailproduct",
+    path: "/detailproduct/:id",
+    props:true,
     name: "DetailProduct",
     component: DetailProductkoa,
   },
