@@ -1,8 +1,8 @@
 import { defineStore } from "pinia";
 
-export const cartProducts = defineStore('cart', {
+export const useCartProducts = defineStore('cart', {
   state: () => ({
-    cart: //localStorage -> JSON.parse....
+    cart: []//localStorage -> JSON.parse....
   }),
 
   getters: {
