@@ -4,7 +4,8 @@ import { db } from '../src/firebase.js'
 
 export const useProductStore = defineStore('productList', {
   state: () => ({
-    productList: []
+    productList: [],
+    //cart: []
   }),
   actions: {
     async getData() {
@@ -16,14 +17,34 @@ export const useProductStore = defineStore('productList', {
         this.productList.push(product)
       }
       )
-},
-},
-// getters:{
+    },
+    /*addToCart(product) {
+      this.cart.push(product)
+    },
+    increaseProd(id) {
+      let item = this.cart.findIndex(item => item.id == id)
+      this.cart[item].quantity++
+    },
+    decreaseProd(id) {
+      let item = this.cart.findIndex(item => item.id == id)
+      if (this.cart[item].quantity <= 1) {
+        this.removeProd(id)
+      } else {
+        this.cart[item].quantity--
+      }
+    },
+    removeProd(id) {
+      let item = this.cart.findIndex(item => item.id == id)
+      this.cart.splice(item, deleteCount: 1)
+    }
+  }, */
+    // getters:{
 
-// filterProductList(country){
-//   return this.productList.filter(product => product.country==='Japan')
-//   }
-// }
+    // filterProductList(country){
+    //   return this.productList.filter(product => product.country==='Japan')
+    //   }
+    // }
   }
+}
 );
 
