@@ -5,7 +5,7 @@ import { db } from '../src/firebase.js'
 export const useProductStore = defineStore('productList', {
   state: () => ({
     productList: [],
-    //cart: []
+    //cart: [] aquí se inicializaría el carrito y habría que poner en actions el addProduct para añadirlo a cart=[]
   }),
   actions: {
     async getData() {
