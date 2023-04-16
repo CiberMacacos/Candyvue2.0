@@ -18,26 +18,6 @@ export const useProductStore = defineStore('productList', {
       }
       )
     },
-    /*addToCart(product) {
-      this.cart.push(product)
-    },
-    increaseProd(id) {
-      let item = this.cart.findIndex(item => item.id == id)
-      this.cart[item].quantity++
-    },
-    decreaseProd(id) {
-      let item = this.cart.findIndex(item => item.id == id)
-      if (this.cart[item].quantity <= 1) {
-        this.removeProd(id)
-      } else {
-        this.cart[item].quantity--
-      }
-    },
-    removeProd(id) {
-      let item = this.cart.findIndex(item => item.id == id)
-      this.cart.splice(item, deleteCount: 1)
-    }
-  }, */
     // getters:{
 
     // filterProductList(country){
