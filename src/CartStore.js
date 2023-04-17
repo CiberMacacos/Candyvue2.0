@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
-//import { useProductStore } from './productsStore.js'
+import { useProductStore } from './productsStore.js'
+import Swal from "sweetalert2";
+import alertColor from "./utils.js"
 
 export const useCartProducts = defineStore('cart', {
   state: () => ({
@@ -21,6 +23,7 @@ export const useCartProducts = defineStore('cart', {
       let index = this.cartProducts.findIndex(product => product.id == item.id);
       if (i !== -1) {
         this.cartProducts[i].quantity += 1;
+        alertColor("Enhorabuena", "El producto ha sido añadido correctamente", "success", "Ok")
       } else {
         this.cartProducts.push(item);
       } //esto no iría aquí, iría en ProductList y en Recomendados

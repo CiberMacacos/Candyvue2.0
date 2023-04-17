@@ -2,33 +2,32 @@
   <div class="w-full flex justify-around items-center text-center md:gap-4 lg:gap-46 sm:p-4 md:p-6">
     <div class="flex flex-col gap-3 hidden sm:block">
       <h1 class="font-bold sm:text-sm ">Productos</h1>
-      <img class="w-12 md:w-28" src="{{ this.cartProducts[i].image }}" alt="{{ this.cartProducts[i].name }}">
+      <img class="w-12 md:w-28" src="{{ image }}" alt="{{ name }}">
     </div>
     <div class="flex flex-col md:gap-3 items-center text-center w-12">
       <h1 class="font-bold text-sm md:text-base">Nombre</h1>
-      <h2 class="sm:text-sm sm:gap4">{{ this.cartProducts[i].name }}</h2>
+      <h2 class="sm:text-sm sm:gap4">{{ name }}</h2>
     </div>
     <div class="flex flex-col gap-3 items-center hidden sm:block">
       <h2 class="font-bold text-sm md:text-base">Precio</h2>
-      <p class="sm:text-sm">{{ this.cartProducts[i].price }}</p>
+      <p class="sm:text-sm">{{ price }}</p>
     </div>
     <div class="flex flex-col gap-3 items-center">
       <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
       <div class="flex flex-row gap-6">
         <button
           class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
-        <p class="sm:text-sm">{{ this.cartProducts[i].quantity }}</p>
+        <p class="sm:text-sm">{{ quantity }}</p>
         <button
           class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
       </div>
     </div>
     <div class="flex flex-col gap-3">
       <h2 class="font-bold text-sm md:text-base">Total</h2>
-      <h2 class="sm:text-sm">{{ this.cartProducts[i].price *
-              this.cartProducts[i].quantity }}€</h2>
+      <h2 class="sm:text-sm">{{ total }}€</h2>
     </div>
     <div class="flex flex-col items-center">
-      <button @click="this.removeProduct()">
+      <button>
         <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
       </button>
     </div>
@@ -37,9 +36,14 @@
 
 <script>
 export default {
-
+  name: 'CartCard',
+  props: {
+    image: { type: String },
+    name: { type: String },
+    price: { type: Number },
+    quantity: { type: Number },
+    total: { type: Number }
+  }
 }
 </script>
 
-<style>
-</style>

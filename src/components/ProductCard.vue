@@ -36,9 +36,10 @@ export default {
           <h3 class="font-semibold text-xs sm:text-sm ml-2  mb-2">{{ price }}€</h3>
         </div>
         <div class="w-auto flex justify-end ml-3 sm:ml-0 sm:mr-4 md:mr-2 lg:ml-4">
-          <img id="addButton" data-value="" data-image="" data-name="" data-price="" data-code=""
-            class="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 cursor-pointer hover:invert"
-            src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
+          <button>
+            <img class="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 cursor-pointer hover:invert"
+              src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
+          </button>
         </div>
       </div>
     </router-link>
