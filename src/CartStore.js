@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { useProductStore } from './productsStore.js'
+//import { useProductStore } from './productsStore.js'
 
 export const useCartProducts = defineStore('cart', {
   state: () => ({
@@ -22,7 +22,6 @@ export const useCartProducts = defineStore('cart', {
       if (i !== -1) {
         this.cartProducts[i].quantity += 1;
       } else {
-        item.quantity = 1;
         this.cartProducts.push(item);
       } //esto no iría aquí, iría en ProductList y en Recomendados
     },

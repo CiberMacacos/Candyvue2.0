@@ -79,7 +79,7 @@ export default {
         <p class="mb-3 md:font-normal text-sm md:text-xl text-black">Alérgenos: {{ this.data.allergens }}</p>
       </div>
       <button @click="this.addProduct"><img class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer hover:invert"
-          src="assets/icon/carrito-de-compra-anadir.png" alt="Comprar"></button>
+          src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar"></button>
     </div>
   </div>
 

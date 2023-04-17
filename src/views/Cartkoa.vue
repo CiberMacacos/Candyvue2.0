@@ -5,9 +5,6 @@ import { mapState, mapActions } from 'pinia'
 
 export default {
   name: 'Cart',
-  props: {
-    quantity: { type: Number }
-  },
   components: { Breadcrumb },
   computed: {
     ...mapState(useCartProducts, ['cartProducts'])
