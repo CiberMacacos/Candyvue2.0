@@ -1,11 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-
 import Mainkoa from "../views/Mainkoa.vue"
-import Infokoa from "../views/Infokoa.vue"
-import Constructionkoa from "../views/Constructionkoa.vue"
-import Cartkoa from "../views/Cartkoa.vue"
-
-import DetailProductkoa from "../views/DetailProductkoa.vue"
 
 const routes = [
   {
@@ -15,18 +9,21 @@ const routes = [
   },
   {
     path: "/info",
+    props:true,
     name: "Info",
-    component: Infokoa,
+    component: () => import('../views/Infokoa.vue')
   },
   {
     path: "/construction",
+    props:true,
     name: "Construction",
-    component: Constructionkoa,
+    component: () => import('../views/Constructionkoa.vue')
   },
   {
     path: "/cart",
+    props:true,
     name: "Cart",
-    component: Cartkoa,
+    component: () => import('../views/Cartkoa.vue')
   },
   {
     path: "/productlist/:country",
@@ -38,7 +35,7 @@ const routes = [
     path: "/detailproduct/:id",
     props:true,
     name: "DetailProduct",
-    component: DetailProductkoa,
+    component: () => import('../views/DetailProductkoa.vue')
   },
 ];
 

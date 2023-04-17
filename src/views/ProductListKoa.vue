@@ -34,7 +34,6 @@ export default {
   <Breadcrumbs :items="[
     { disabled: false, text: 'Principal', to: '/' },
     { disabled: false, text: 'Japón', to: '/productlist' },
-    { disabled: false, text: 'Producto', to: '/detailproduct' },
   ]" />
   <!-- Tarjetas de Productos -->
   <div class="flex justify-center lg:justify-center">
