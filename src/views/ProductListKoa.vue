@@ -7,7 +7,7 @@ import { mapState } from 'pinia';
 export default {
 
   name: 'ProductList',
-  
+
   components: { Breadcrumbs,ProductCard },
   props: {
     country: {

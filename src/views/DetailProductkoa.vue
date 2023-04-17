@@ -22,7 +22,7 @@ export default {
     const filtered= this.productList.filter(product => product.id==this.id)
     this.data=  filtered[0]
   },
-  
+
 
   computed: {
     ...mapState(useProductStore,['productList']),
@@ -34,14 +34,14 @@ export default {
   const chosenNumbers=[];
 
   while (chosenNumbers.length<=3) {
-    
-  let randomNumber = Math.floor(Math.random()*36); 
 
-  if(!chosenNumbers.includes(randomNumber)){    
-    chosenNumbers.push(randomNumber);    
+  let randomNumber = Math.floor(Math.random()*36);
+
+  if(!chosenNumbers.includes(randomNumber)){
+    chosenNumbers.push(randomNumber);
     chosenProducts.push(this.productList[randomNumber]);
       }
-    } 
+    }
     console.log(this.productList)
     console.log("chosenproducts"+chosenProducts)
     return chosenProducts
@@ -79,8 +79,8 @@ export default {
     ¡Síguenos en nuestras redes y no te pierdas las novedades!
   </h1>
   <a href="https://www.instagram.com/candykoaweb/" target="_blank">
-    <img class="w-8 h-auto sm:w-8 md:w-10 sm:h-auto md:h-auto ml-48 md:ml-48 lg:ml-96 lg:mt-1" src="assets/icon/instagram2.jpeg"
-      alt="Instagram"/></a>
+    <img class="w-8 h-auto sm:w-8 md:w-10 sm:h-auto md:h-auto ml-48 md:ml-48 lg:ml-96 lg:mt-1" src="/assets/icon/instagram2.jpeg" alt="Instagram"/>
+  </a>
 </div>
 <!--Productos recomendados + footer-->
 <div class="flex flex-col justify-center items-center gap-6">

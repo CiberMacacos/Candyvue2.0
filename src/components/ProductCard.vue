@@ -32,18 +32,16 @@ export default {
         :src="image" :alt="name">
       <div class="flex flex-row items-center flex-end justify-end">
         <div class="flex flex-col sm:w-32 md:w-48 lg:p-4 ">
-          <h1 class="w-16 sm:w-16 md:w-auto lg:w-auto ml-2 font-bold text-left text-sm sm:text-sm">{{name}}</h1>
+          <h1 class="w-16 sm:w-16 md:w-auto lg:w-auto ml-2 font-bold text-left text-sm sm:text-sm">{{ name }}</h1>
           <h3 class="font-semibold text-xs sm:text-sm ml-2  mb-2">{{ price }}€</h3>
         </div>
         <div class="w-auto flex justify-end ml-3 sm:ml-0 sm:mr-4 md:mr-2 lg:ml-4">
-          <img id="addButton" data-value="" data-image="" data-name="" data-price="" data-code=""
+          <button><img id="addButton" data-value="" data-image="" data-name="" data-price="" data-code=""
             class="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 cursor-pointer hover:invert"
-            src="assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
+            src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
+          </button>
         </div>
       </div>
     </router-link>
     </div>
 </template>
-
-<style>
-</style>
