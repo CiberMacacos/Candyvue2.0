@@ -2,10 +2,11 @@ import { defineStore } from "pinia";
 import { useProductStore } from './productsStore.js'
 import Swal from "sweetalert2";
 import alertColor from "./utils.js"
+import { useLocalStorage } from "@vueuse/core";
 
 export const useCartProducts = defineStore('cart', {
   state: () => ({
-    cartProducts: []//localStorage -> JSON.parse....
+    cartProducts: useLocalStorage('cart', [])//localStorage -> JSON.parse....
   }),
 
   getters: {
@@ -21,19 +22,20 @@ export const useCartProducts = defineStore('cart', {
   actions: {
     addProduct(item) {
       let index = this.cartProducts.findIndex(product => product.id == item.id);
-      if (i !== -1) {
-        this.cartProducts[i].quantity += 1;
-        alertColor("Enhorabuena", "El producto ha sido añadido correctamente", "success", "Ok")
+      if (index !== -1) {
+        this.cartProducts[index].quantity += 1;
+        //alertColor("Enhorabuena", "El producto ha sido añadido correctamente", "success", "Seguir comprando")
       } else {
         this.cartProducts.push(item);
+        alertColor("Enhorabuena", "El producto ha sido añadido correctamente", "success", "Seguir comprando")
       } //esto no iría aquí, iría en ProductList y en Recomendados
     },
 
     decreaseProduct(item) {
       let index = this.cartProducts.findIndex(product => product.id == item.id);
-      if (i !== -1) {
-        this.cartProducts[i].quantity -= 1;
-        if (this.cartProducts[i].quantity === 0) {
+      if (index !== -1) {
+        this.cartProducts[index].quantity -= 1;
+        if (this.cartProducts[index].quantity === 0) {
           this.cartProducts = this.cartProducts.filter(product => product.id !== item.id);
         }
       }
