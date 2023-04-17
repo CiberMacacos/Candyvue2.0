@@ -6,7 +6,8 @@ import { useLocalStorage } from "@vueuse/core";
 
 export const useCartProducts = defineStore('cart', {
   state: () => ({
-    cartProducts: useLocalStorage('cart', [])//localStorage -> JSON.parse....
+    cartProducts: []
+    //cartProducts: useLocalStorage('cart', [])//localStorage -> JSON.parse....
   }),
 
   getters: {

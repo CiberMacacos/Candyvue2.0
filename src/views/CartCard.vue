@@ -1,3 +1,24 @@
+<script>
+import { mapActions } from 'pinia';
+import { useCartProducts } from '../CartStore.js';
+export default {
+  name: 'CartCard',
+  props: {
+    image: { type: String },
+    name: { type: String },
+    price: { type: Number },
+    quantity: { type: Number },
+    total: { type: Number }
+  },
+  methods: {
+    ...mapActions(useCartProducts, ['addProduct']),
+    ...mapActions(useCartProducts, ['decreaseProduct']),
+    ...mapActions(useCartProducts, ['removeProduct'])
+  },
+}
+</script>
+
+
 <template>
   <div class="w-full flex justify-around items-center text-center md:gap-4 lg:gap-46 sm:p-4 md:p-6">
     <div class="flex flex-col gap-3 hidden sm:block">
@@ -15,10 +36,10 @@
     <div class="flex flex-col gap-3 items-center">
       <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
       <div class="flex flex-row gap-6">
-        <button
+        <button @click="this.decreaseProduct({ id, name, image, price, quantity, total })"
           class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
         <p class="sm:text-sm">{{ quantity }}</p>
-        <button
+        <button @click="this.addProduct({ id, name, image, price, quantity, total })"
           class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
       </div>
     </div>
@@ -27,23 +48,9 @@
       <h2 class="sm:text-sm">{{ total }}€</h2>
     </div>
     <div class="flex flex-col items-center">
-      <button>
+      <button @click="this.removeProduct({ id, name, image, price, quantity, total })">
         <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
       </button>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'CartCard',
-  props: {
-    image: { type: String },
-    name: { type: String },
-    price: { type: Number },
-    quantity: { type: Number },
-    total: { type: Number }
-  }
-}
-</script>
-

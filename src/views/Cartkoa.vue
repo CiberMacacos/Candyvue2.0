@@ -1,19 +1,16 @@
 <script>
-import Breadcrumb from '../components/Breadcrumb.vue'
+import Breadcrumbs from '../components/Breadcrumbs.vue'
 import { useCartProducts } from '../CartStore.js'
 import { mapState, mapActions } from 'pinia'
 import CartCard from './CartCard.vue'
 
 export default {
   name: 'Cart',
-  components: { Breadcrumb, CartCard },
+  components: { Breadcrumbs, CartCard },
   computed: {
     ...mapState(useCartProducts, ['cartProducts'])
   },
   methods: {
-    ...mapActions(useCartProducts, ['addProduct']),
-    ...mapActions(useCartProducts, ['decreaseProduct']),
-    ...mapActions(useCartProducts, ['removeProduct']),
     ...mapActions(useCartProducts, ['restartCart'])
   },
 }
@@ -39,27 +36,27 @@ export default {
           <h2 class="font-bold text-sm md:text-base">Precio</h2>
           <p class="sm:text-sm">{{ this.cartProducts[i].price }}</p>
         </div>
-                  <div class="flex flex-col gap-3 items-center">
-                    <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
-                    <div class="flex flex-row gap-6">
-                      <button
-                        class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
-                      <p class="sm:text-sm">{{ this.cartProducts[i].quantity }}</p>
-                      <button
-                        class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
-                    </div>
-                  </div>
-                  <div class="flex flex-col gap-3">
-                    <h2 class="font-bold text-sm md:text-base">Total</h2>
-                    <h2 class="sm:text-sm">{{ this.cartProducts[i].price *
-                      this.cartProducts[i].quantity }}€</h2>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <button @click="this.removeProduct()">
-                      <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
-                    </button>
-                  </div>
-                </div>-->
+                    <div class="flex flex-col gap-3 items-center">
+                      <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
+                      <div class="flex flex-row gap-6">
+                          <button
+                            class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
+                          <p class="sm:text-sm">{{ this.cartProducts[i].quantity }}</p>
+                          <button
+                            class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-3">
+                        <h2 class="font-bold text-sm md:text-base">Total</h2>
+                        <h2 class="sm:text-sm">{{ this.cartProducts[i].price *
+                          this.cartProducts[i].quantity }}€</h2>
+                      </div>
+                      <div class="flex flex-col items-center">
+                        <button @click="this.removeProduct()">
+                          <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
+                        </button>
+                      </div>
+                    </div>-->
       </div>
       <!--Subtotal productos-->
       <div class="flex flex-col w-100% h50 gap-4 md:items-end font-bold my-4 md:m-10">
