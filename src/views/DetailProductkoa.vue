@@ -60,13 +60,26 @@ export default {
   ]" />
   <!--Info-producto:img, texto, precio-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">
-    <img :src=this.data.image alt="">
-    <p class="font-bold">{{ this.data.name }}</p>
-    <p>{{ this.data.price }} €</p>
-    <p>{{ this.data.description }}</p>
-    <p>Ingredientes: {{ this.data.ingredients }}</p>
-    <p>Alérgenos: {{ this.data.allergens }}</p>
+    <div class="w-full h-full flex flex-col md:flex-row items-center border-blue-800 max-w-xl gap-5">
+      <div class="w-auto h-auto md:w-full md:h-auto bg-transparent items-center">
+        <img class="w-56 h-auto md:w-auto md:h-auto" :src=this.data.image alt="this.data.name">
+      </div>
+    </div>
+    <div class="justify-center">
+      <p class="font-bold">{{ this.data.name }}</p>
+      <p class="text-center">{{ this.data.price }} €</p>
+    </div>
+    <div class="bg-blue-50 w-auto md:p-4 flex flex-col items-center border-blue-800 max-w-xl hover:bg-pink-50 gap-5">
+      <div class="flex flex-col justify-between p-4 leading-normal text-justify">
+        <p class="mb-3 font-normal text-sm md:text-2xl text-black">{{ this.data.description }}</p>
+        <p class="md:mb-3 font-normal text-sm md:text-xl text-black">Ingredientes: {{ this.data.ingredients }}</p>
+        <p class="mb-3 md:font-normal text-sm md:text-xl text-black">Alérgenos: {{ this.data.allergens }}</p>
+      </div>
+      <img class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer hover:invert"
+        src="assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
+    </div>
   </div>
+
 
   <!--Anuncio novedades redes-->
   <div
