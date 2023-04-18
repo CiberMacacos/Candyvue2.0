@@ -51,11 +51,7 @@ export default {
     </div>
     <hr class="my-6 border-blue-300 sm:mx-auto lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue"
-          class="hover:underline">CandyKoa™</router-link>. All Rights
-        Reserved.
-
-      </span>
+      <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline">CandyKoa™</router-link>. All Rights Reserved.</span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <a href="mailto:candykoaweb@gmail.com" target="_blank" class="text-white">
           <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/gmail2.jpeg" alt="Gmail" />
