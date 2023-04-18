@@ -49,7 +49,7 @@ export default {
         </div>
       </div>
     </div>
-    <hr class="my-6 border-blue-300 sm:mx-auto lg:my-8" />
+    <hr class="my-6 border-blue-300 sm:mx-auto lg:my-8"/>
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline">CandyKoa™</router-link>. All Rights Reserved.</span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
