@@ -1,6 +1,12 @@
 <script>
-export default {
+import { mapActions } from 'pinia'
+import { useCartProducts } from '../CartStore.js'
 
+export default {
+  name: 'SuccessPay',
+  methods: {
+    ...mapActions(useCartProducts, ['restartCart'])
+  }
 }
 </script>
 
