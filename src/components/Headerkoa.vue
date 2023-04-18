@@ -1,15 +1,24 @@
-  <script>
-  export default {
-    name: 'Header',
-    mounted(){
-    
-    }
+<script>
+import { mapActions, mapState } from 'pinia';
+import { useCartProducts } from '../CartStore.js';
+export default {
+  name: 'Header',
+  mounted() {
+
+  },
+  computed: {
+    ...mapState(useCartProducts, ['cartProducts']),
+    ...mapState(useCartProducts, ['totalProducts'])
+  },
+  methods: {
+
+  }
 }
 </script>
 
 <template>
   <header class="bg-[url('/assets/chuches/nubes.jpg')] bg-center md:w-auto lg:w-auto w-full h-96 bg-cover
-    bg-no-repeat object-top">
+                                                            bg-no-repeat object-top">
     <!--Menú-->
     <nav
       class="flex flex-row min-h-[10vh] md:justify-center md:flex-row justify-between md:items-center w-[100%] mx-auto">
@@ -50,6 +59,7 @@
     </router-link>
     <router-link to="/cart" class="flex justify-end my-24 mx-4 md:absolute md:top-5 md:right-5 md:m-0">
       <img id="carrito" class="w-10 h-auto md:w-12" src="assets/icon/carrito.png" alt="carrito">
+      <div class="bg-red-400 rounded-xl font-bold p-1">{{ totalProducts }}</div>
     </router-link>
   </header>
 </template>
