@@ -19,7 +19,7 @@ export default {
 <template>
   <header
     class="bg-[url('/assets/chuches/nubes.jpg')] bg-center md:w-auto lg:w-auto w-full h-96 bg-cover
-                                                                                                                                                                                                  bg-no-repeat object-top">
+                                                                                                                                                                                                    bg-no-repeat object-top">
     <!--Menú-->
     <nav
       class="flex flex-row min-h-[10vh] md:justify-center md:flex-row justify-between md:items-center w-[100%] mx-auto">

@@ -4,10 +4,11 @@ import ProductCard from '../components/ProductCard.vue'
 import { useProductStore } from '../productsStore'
 import { useCartProducts } from '../CartStore'
 import { mapState, mapActions } from 'pinia'
+import Popper from 'vue3-popper'
 
 export default {
   name: 'DetailProduct',
-  components: { Breadcrumbs, ProductCard },
+  components: { Breadcrumbs, ProductCard, Popper },
   props: {
     id: {
       type: String,
@@ -78,9 +79,11 @@ export default {
         <p class="md:mb-3 font-normal text-sm md:text-xl text-black">Ingredientes: {{ this.data.ingredients }}</p>
         <p class="mb-3 md:font-normal text-sm md:text-xl text-black">Alérgenos: {{ this.data.allergens }}</p>
       </div>
-      <button @click="this.addProduct(this.data)"><img
-          class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer hover:invert"
-          src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar"></button>
+      <Popper hover content="Añadir producto al carrito">
+        <button @click="this.addProduct(this.data)"><img
+            class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer hover:invert"
+            src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar"></button>
+      </Popper>
     </div>
   </div>
 

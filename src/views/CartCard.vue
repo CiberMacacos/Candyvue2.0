@@ -1,8 +1,10 @@
 <script>
 import { mapActions } from 'pinia';
 import { useCartProducts } from '../CartStore.js';
+import Popper from 'vue3-popper';
 export default {
   name: 'CartCard',
+  components: { Popper },
   props: {
     image: { type: String },
     name: { type: String },
@@ -38,11 +40,15 @@ export default {
     <div class="flex flex-col gap-3 items-center">
       <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
       <div class="flex flex-row gap-6">
-        <button @click="this.decreaseProduct({ id })"
-          class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
+        <Popper hover content="Disminuir cantidad de producto">
+          <button @click="this.decreaseProduct({ id })"
+            class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
+        </Popper>
         <p class="sm:text-sm">{{ quantity }}</p>
-        <button @click="this.increaseProduct({ id })"
-          class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
+        <Popper hover content="Aumentar cantidad de producto">
+          <button @click="this.increaseProduct({ id })"
+            class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
+        </Popper>
       </div>
     </div>
     <div class="flex flex-col gap-3">
@@ -50,9 +56,11 @@ export default {
       <h2 class="sm:text-sm">{{ total }}€</h2>
     </div>
     <div class="flex flex-col items-center">
-      <button @click="this.removeProduct({ id })">
-        <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
-      </button>
+      <Popper class="text-pink-400" hover content="Eliminar producto">
+        <button @click="this.removeProduct({ id })">
+          <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
+        </button>
+      </Popper>
     </div>
   </div>
 </template>
