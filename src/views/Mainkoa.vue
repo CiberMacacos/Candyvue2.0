@@ -20,20 +20,20 @@ export default {
   const chosenNumbers=[];
 
   while (chosenNumbers.length<=3) {
-    
-  let randomNumber = Math.floor(Math.random()*36); 
 
-  if(!chosenNumbers.includes(randomNumber)){    
-    chosenNumbers.push(randomNumber);    
+  let randomNumber = Math.floor(Math.random()*36);
+
+  if(!chosenNumbers.includes(randomNumber)){
+    chosenNumbers.push(randomNumber);
     chosenProducts.push(this.productList[randomNumber]);
       }
-    } 
+    }
     console.log(this.productList)
     console.log("chosenproducts"+chosenProducts)
     return chosenProducts
     }
   },
-  
+
 }
 </script>
 
@@ -46,9 +46,7 @@ export default {
         ¡La desconexión que necesitas a sólo un click!
       </p>
       <div class="flex flex-row justify-center items-center gap-2 md:justify-center md:items-center">
-        <a href="productList.html"
-          class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-900 md:h-7 md:p-5 text-sm md:text-2xl">¡Quiero
-          verlo!</a>
+        <router-link to="/productlist/japan" class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-900 md:h-7 md:p-5 text-sm md:text-2xl">¡Quiero verlo!</router-link>
         <img src="assets/icon/mouse-click-icon.svg" class="w-6 md:hover:animate-ping" alt="Flecha">
       </div>
     </div>
@@ -105,11 +103,11 @@ export default {
     <h2 class="text-sm text center md:text-2xl lg:text-3xl font-bold text-rose-900">Lo primero eres tú.</h2>
     <div class="flex flex-row lg:w-12 md:w-10 w-6 items-center justify-center gap-10 md:gap-20 mt-4 md:mt-9">
       <!--Iconos alérgenos-->
-      <img class="md:hover:scale-125" src="assets/icon/avellana.jpeg" alt="Avellana">
-      <img class="md:hover:scale-125" src="assets/icon/azucar.webp" alt="Azúcar">
-      <img class="md:hover:scale-125" src="assets/icon/cacahuete.webp" alt="Cacahuete">
-      <img class="md:hover:scale-125" src="assets/icon/huevos.jpeg" alt="Huevos">
-      <img class="md:hover:scale-125" src="assets/icon/leche.jpeg" alt="Leche">
+      <img src="assets/icon/avellana.jpeg" alt="Avellana">
+      <img src="assets/icon/azucar.webp" alt="Azúcar">
+      <img src="assets/icon/cacahuete.webp" alt="Cacahuete">
+      <img src="assets/icon/huevos.jpeg" alt="Huevos">
+      <img src="assets/icon/leche.jpeg" alt="Leche">
     </div>
   </div>
   <!--Sección productos recomendados-->
@@ -121,7 +119,7 @@ export default {
     class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16">
     <!--Productos-->
     <ProductCard v-if="getRandomProduct" v-for="product in getRandomProduct" :name="product.name" :id="product.id" :image="product.image"
-    :price="product.price" />  
+    :price="product.price" />
   </div>
 </div>
 <!--Script de Javascript para el menú de móvil - No funciona aún-->

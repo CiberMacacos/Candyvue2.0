@@ -21,7 +21,7 @@ export default {
               <router-link to="/info" class="hover:underline">Quiénes somos</router-link>
             </li>
             <li>
-              <router-link to="" class="hover:underline">Nuestros productos</router-link>
+              <router-link to="/productlist/mexico" class="hover:underline">Nuestros productos</router-link>
             </li>
           </ul>
         </div>
