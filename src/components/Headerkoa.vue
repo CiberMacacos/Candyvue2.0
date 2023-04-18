@@ -60,7 +60,7 @@ export default {
     </router-link>
     <router-link to="/cart" class="flex justify-end my-24 mx-4 md:absolute md:top-5 md:right-5 md:m-0">
       <img id="carrito" class="w-10 h-auto md:w-12 bg-white border-2 border-solid border-pink-500 rounded-xl p-2"
-        src="assets/icon/carrito.png" alt="carrito">
+        src="/assets/icon/carrito.png" alt="carrito">
       <div
         class="bg-red-400 flex items-center border-2 border-solid border-pink-500 -translate-x-2  justify-center rounded-xl font-bold p-1 w-6 h-6 text-center">
         {{

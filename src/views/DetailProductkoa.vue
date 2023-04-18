@@ -24,7 +24,6 @@ export default {
     this.data = filtered[0]
   },
 
-
   computed: {
     ...mapState(useProductStore, ['productList']),
     getRandomProduct() {
@@ -49,24 +48,29 @@ export default {
     },
     ...mapState(useCartProducts, ['cartProducts']),
 
-    breadProduct() {
+    breadName(){
       const url = window.location.href
       let name = url.split('/')
       return name[4]
+    },
+
+    breadProduct() {
+      const url = window.location.href
+      let name1 = url.split('/')
+      return name1[4]
     }
   },
   methods: {
-    ...mapActions(useCartProducts, ['addProducts'])
+    ...mapActions(useCartProducts, ['addProduct'])
   }
 }
-
 </script>
 
 <template>
   <Breadcrumbs :items="[
     { disabled: false, text: 'Principal', to: '/' },
     { disabled: false, text: breadName, to: '/productlist' },
-    { disabled: false, text: 'Producto', to: '/detailproduct' },
+    { disabled: false, text: breadProduct, to: '' },
   ]" />
   <!--Info-producto:img, texto, precio-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">

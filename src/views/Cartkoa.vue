@@ -1,12 +1,11 @@
 <script>
-import Breadcrumbs from '../components/Breadcrumbs.vue'
 import { useCartProducts } from '../CartStore.js'
 import { mapState, mapActions } from 'pinia'
 import CartCard from './CartCard.vue'
 
 export default {
   name: 'Cart',
-  components: { Breadcrumbs, CartCard },
+  components: { CartCard },
   computed: {
     ...mapState(useCartProducts, ['cartProducts'])
   },
