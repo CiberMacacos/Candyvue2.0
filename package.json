@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^10.0.2",
     "firebase": "^9.19.1",
     "pinia": "^2.0.33",
+    "sweetalert2": "^11.7.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

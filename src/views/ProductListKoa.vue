@@ -8,7 +8,7 @@ export default {
 
   name: 'ProductList',
 
-  components: { Breadcrumbs,ProductCard },
+  components: { Breadcrumbs, ProductCard },
   props: {
     country: {
       type: String,
@@ -24,10 +24,10 @@ export default {
   },*/
   computed: {
 
-    ...mapState(useProductStore,['productList']),
+    ...mapState(useProductStore, ['productList']),
 
-    filterProductList(){
-      return this.productList.filter(product => product.country===this.country)
+    filterProductList() {
+      return this.productList.filter(product => product.country === this.country)
     },
 
     breadName(){
