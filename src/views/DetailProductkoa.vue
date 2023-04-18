@@ -4,7 +4,6 @@ import ProductCard from '../components/ProductCard.vue'
 import { useProductStore } from '../productsStore'
 import { useCartProducts } from '../CartStore'
 import { mapState, mapActions } from 'pinia'
-import alertColor from '../utils.js'
 
 export default {
   name: 'DetailProduct',

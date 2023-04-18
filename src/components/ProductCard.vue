@@ -1,5 +1,6 @@
 <script>
 import { useCartProducts } from '../CartStore'
+import { useProductStore } from '../productsStore.js'
 import { mapActions, mapState } from 'pinia'
 
 
@@ -11,8 +12,8 @@ export default {
     id: { type: Number },
     price: { type: Number },
     image: { type: String },
-    quantity: { type: Number },
-    total: { type: Number }
+    //quantity: { type: Number },
+    //total: { type: Number }
   },
 
   data() {
@@ -24,7 +25,8 @@ export default {
     ...mapActions(useCartProducts, ['addProduct'])
   },
   computed: {
-    ...mapState(useCartProducts, ['cartProducts'])
+    ...mapState(useCartProducts, ['cartProducts']),
+    ...mapState(useProductStore, ['productList'])
   }
 
 }
@@ -45,7 +47,7 @@ export default {
           <h3 class="font-semibold text-xs sm:text-sm ml-2  mb-2">{{ price }}€</h3>
         </div>
         <div class="w-auto flex justify-end ml-3 sm:ml-0 sm:mr-4 md:mr-2 lg:ml-4">
-          <button @click="this.addProduct({ name, id, price, quantity, image, total })">
+          <button @click="this.addProduct({ name, id, price, image })">
             <img class="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 cursor-pointer hover:invert"
               src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar">
           </button>
@@ -55,5 +57,3 @@ export default {
   </div>
 </template>
 
-<style>
-</style>
