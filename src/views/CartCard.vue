@@ -11,7 +11,7 @@ export default {
     total: { type: Number }
   },
   methods: {
-    ...mapActions(useCartProducts, ['addProduct']),
+    ...mapActions(useCartProducts, ['increaseProduct']),
     ...mapActions(useCartProducts, ['decreaseProduct']),
     ...mapActions(useCartProducts, ['removeProduct'])
   },
@@ -23,7 +23,7 @@ export default {
   <div class="w-full flex justify-around items-center text-center md:gap-4 lg:gap-46 sm:p-4 md:p-6">
     <div class="flex flex-col gap-3 hidden sm:block">
       <h1 class="font-bold sm:text-sm ">Productos</h1>
-      <img class="w-12 md:w-28" src="{{ image }}" alt="{{ name }}">
+      <img class="w-12 md:w-28" src="image" alt="name">
     </div>
     <div class="flex flex-col md:gap-3 items-center text-center w-12">
       <h1 class="font-bold text-sm md:text-base">Nombre</h1>
@@ -31,7 +31,7 @@ export default {
     </div>
     <div class="flex flex-col gap-3 items-center hidden sm:block">
       <h2 class="font-bold text-sm md:text-base">Precio</h2>
-      <p class="sm:text-sm">{{ price }}</p>
+      <p class="sm:text-sm">{{ price }}€</p>
     </div>
     <div class="flex flex-col gap-3 items-center">
       <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
@@ -39,7 +39,7 @@ export default {
         <button @click="this.decreaseProduct({ id, name, image, price, quantity, total })"
           class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
         <p class="sm:text-sm">{{ quantity }}</p>
-        <button @click="this.addProduct({ id, name, image, price, quantity, total })"
+        <button @click="this.increaseProduct({ id, name, image, price, quantity, total })"
           class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
       </div>
     </div>

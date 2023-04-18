@@ -6,8 +6,8 @@ import { useLocalStorage } from "@vueuse/core";
 
 export const useCartProducts = defineStore('cart', {
   state: () => ({
-    cartProducts: []
-    //cartProducts: useLocalStorage('cart', [])//localStorage -> JSON.parse....
+    //cartProducts: []
+    cartProducts: useLocalStorage('cartProducts', [])//localStorage -> JSON.parse....
   }),
 
   getters: {
@@ -25,13 +25,19 @@ export const useCartProducts = defineStore('cart', {
       let index = this.cartProducts.findIndex(product => product.id == item.id);
       if (index !== -1) {
         this.cartProducts[index].quantity += 1;
+        alertColor("¡Enhorabuena!", "El producto se ha añadido correctamente", "success", "Seguir comprando")
         //alertColor("Enhorabuena", "El producto ha sido añadido correctamente", "success", "Seguir comprando")
       } else {
         this.cartProducts.push(item);
-        alertColor("Enhorabuena", "El producto ha sido añadido correctamente", "success", "Seguir comprando")
+        alertColor("¡Enhorabuena!", "El producto se ha añadido correctamente", "success", "Seguir comprando")
       } //esto no iría aquí, iría en ProductList y en Recomendados
     },
-
+    increaseProduct(item) {
+      let index = this.cartProducts.findIndex(product => product.id == item.id);
+      if (index !== -1) {
+        this.cartProducts[index].quantity += 1;
+      }
+    },
     decreaseProduct(item) {
       let index = this.cartProducts.findIndex(product => product.id == item.id);
       if (index !== -1) {
@@ -40,18 +46,19 @@ export const useCartProducts = defineStore('cart', {
           this.cartProducts = this.cartProducts.filter(product => product.id !== item.id);
         }
       }
-    },
-
-    removeProduct(item) {
-      this.cartProducts = this.cartProducts.filter(product => product.id !== item.id);
-    },
-
-    payProducts() {
-      //aquí iría el código de Stripe para vincularlo al botón Pagar
-    },
-
-    restartCart() {
-      this.cartProducts = [];
     }
+  },
+
+  removeProduct(item) {
+    this.cartProducts = this.cartProducts.filter(product => product.id !== item.id);
+    alertColor("Producto eliminado", "El producto se ha eliminado correctamente", "success", "Seguir comprando")
+  },
+
+  payProducts() {
+    //aquí iría el código de Stripe para vincularlo al botón Pagar
+  },
+
+  restartCart() {
+    this.cartProducts = [];
   }
 });
