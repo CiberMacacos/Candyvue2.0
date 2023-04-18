@@ -1,3 +1,9 @@
+<script>
+export default {
+
+}
+</script>
+
 <template>
   <div class="bg-blue-50 w-full h-full">
     <div class="flex flex-col justify-center items-center mt-20 gap-4">
@@ -17,19 +23,11 @@
       <img class="w-36 md:w-64" src="/assets/logo-letras.png" alt="Logo" />
       <div class="flex flex-row justify-center items-center gap-4">
         <img src="/assets/icon/arrow_curve.png" alt="Click aquí" class="w-10 md:w-20" />
-        <a href="index.html"
+        <router-link to="/"
           class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full">Página
-          principal</a>
+          principal</router-link>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style>
-</style>

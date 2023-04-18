@@ -9,7 +9,8 @@ export default {
     price: { type: Number },
     id: { type: Number },
     quantity: { type: Number },
-    total: { type: Number }
+    total: { type: Number },
+    code: { type: String }
   },
   methods: {
     ...mapActions(useCartProducts, ['increaseProduct']),

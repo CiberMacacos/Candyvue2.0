@@ -11,7 +11,8 @@ export default {
     ...mapState(useCartProducts, ['cartProducts'])
   },
   methods: {
-    ...mapActions(useCartProducts, ['restartCart'])
+    ...mapActions(useCartProducts, ['restartCart']),
+    ...mapActions(useCartProducts, ['payProducts'])
   },
 }
 </script>
@@ -22,7 +23,7 @@ export default {
     <div class="mx-10 mt-10">
       <div class="bg-white w-full rounded-lg flex flex-col md:gap-8">
         <CartCard v-for="item in this.cartProducts" :id="item.id" :image="item.image" :name="item.name"
-          :price="item.price" :quantity="item.quantity" :total="item.price * item.quantity" />
+          :price="item.price" :quantity="item.quantity" :code="item.code" :total="item.price * item.quantity" />
       </div>
       <!--Subtotal productos-->
       <div class="flex flex-col w-100% h50 gap-4 md:items-end font-bold my-4 md:m-10">
@@ -30,9 +31,11 @@ export default {
           += item.price * item.quantity), 0) }}€</div>
         <div
           class="flex justify-end sm:items-center md:gap-10 gap-2 md:flex-row flex-col rounded-lg font-bold text-sm md:text-lg">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Pagar</button>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full"><router-link
-              to="/">Seguir Comprando</router-link></button>
+          <button @click="this.payProducts"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Pagar</button>
+          <button><router-link to="/"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Seguir
+              Comprando</router-link></button>
           <button @click="this.restartCart"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Vaciar
             Carrito</button>

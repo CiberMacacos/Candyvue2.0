@@ -1,15 +1,25 @@
-  <script>
-  export default {
-    name: 'Header',
-    mounted(){
+<script>
+import { mapActions, mapState } from 'pinia';
+import { useCartProducts } from '../CartStore.js';
+export default {
+  name: 'Header',
+  mounted() {
 
-    }
+  },
+  computed: {
+    ...mapState(useCartProducts, ['cartProducts']),
+    ...mapState(useCartProducts, ['totalProducts'])
+  },
+  methods: {
+
+  }
 }
 </script>
 
 <template>
-  <header class="bg-[url('/assets/chuches/nubes.jpg')] bg-center md:w-auto lg:w-auto w-full h-96 bg-cover
-    bg-no-repeat object-top">
+  <header
+    class="bg-[url('/assets/chuches/nubes.jpg')] bg-center md:w-auto lg:w-auto w-full h-96 bg-cover
+                                                                                                                                                                                                  bg-no-repeat object-top">
     <!--Menú-->
     <nav
       class="flex flex-row min-h-[10vh] md:justify-center md:flex-row justify-between md:items-center w-[100%] mx-auto">
@@ -49,7 +59,12 @@
       <img class="w-36 h-auto md:w-56 md:h-auto" src="/assets/logo-letras.png" alt="Logo">
     </router-link>
     <router-link to="/cart" class="flex justify-end my-24 mx-4 md:absolute md:top-5 md:right-5 md:m-0">
-      <img id="carrito" class="w-10 h-auto md:w-12" src="/assets/icon/carrito.png" alt="carrito">
+      <img id="carrito" class="w-10 h-auto md:w-12 bg-white border-2 border-solid border-pink-500 rounded-xl p-2"
+        src="assets/icon/carrito.png" alt="carrito">
+      <div
+        class="bg-red-400 flex items-center border-2 border-solid border-pink-500 -translate-x-2  justify-center rounded-xl font-bold p-1 w-6 h-6 text-center">
+        {{
+          totalProducts }}</div>
     </router-link>
   </header>
 </template>

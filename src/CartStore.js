@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { useProductStore } from './productsStore.js'
 import alertColor from "./utils.js"
 import { useLocalStorage } from "@vueuse/core";
+import stripeKeys from "./stripeKeys.js"
 
 export const useCartProducts = defineStore('cart', {
   state: () => ({
@@ -15,8 +16,13 @@ export const useCartProducts = defineStore('cart', {
     },
 
     totalProducts() {
-      return this.cartProducts.length;
-    }
+      let total = 0;
+      for (let i = 0; i < this.cartProducts.length; i++) {
+        total = total + this.cartProducts[i].quantity;
+      }
+      return total;
+    },
+
   },
 
   actions: {
@@ -49,10 +55,25 @@ export const useCartProducts = defineStore('cart', {
     },
     removeProduct(id) {
       this.cartProducts = this.cartProducts.filter(product => product.id !== id.id);
-      alertColor("Producto eliminado", "El producto se ha eliminado correctamente", "success", "Seguir comprando")
     },
     payProducts() {
-      //aquí iría el código de Stripe para vincularlo al botón Pagar
+      const lines = [];
+      for (const value of this.cartProducts) {
+        lines.push({ price: value.code, quantity: value.quantity });
+      }
+      Stripe(stripeKeys.public)
+        .redirectToCheckout({
+          lineItems: lines,
+          mode: "payment",
+          successUrl: "https://curious-truffle-ce9ba8.netlify.app/success.html",
+          cancelUrl: "https://curious-truffle-ce9ba8.netlify.app/cancel.html",
+        })
+        .then((res) => {
+          if (res.error) {
+            $stripe.insertAdjacentElement("afterend", res.error.message);
+          }
+        })
+      this.cartProducts = [];
     },
     restartCart() {
       this.cartProducts = []
