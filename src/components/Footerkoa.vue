@@ -21,7 +21,7 @@ export default {
               <router-link to="/info" class="hover:underline">Quiénes somos</router-link>
             </li>
             <li>
-              <router-link to="" class="hover:underline">Nuestros productos</router-link>
+              <router-link to="/productlist/mexico" class="hover:underline">Nuestros productos</router-link>
             </li>
           </ul>
         </div>
@@ -54,14 +54,14 @@ export default {
       <span class="text-sm sm:text-center">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline">CandyKoa™</router-link>. All Rights Reserved.</span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <a href="mailto:candykoaweb@gmail.com" target="_blank" class="text-white">
-          <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/gmail2.jpeg" alt="Gmail" />
+          <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/gmail2.jpeg" alt="Gmail"/>
         </a>
         <a href="https://www.instagram.com/candykoaweb/" target="_blank" class="text-white">
           <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/instagram2.jpeg"
-            alt="Instagram" />
+            alt="Instagram"/>
         </a>
         <a href="https://twitter.com/CandyKoa_" target="_blank" class="text-white">
-          <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/twitter2.webp" alt="Instagram" />
+          <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/twitter2.webp" alt="Instagram"/>
         </a>
       </div>
     </div>

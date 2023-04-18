@@ -34,34 +34,40 @@ export default {
       const chosenProducts = [];
       const chosenNumbers = [];
 
-  while (chosenNumbers.length<=3) {
-
-  let randomNumber = Math.floor(Math.random()*36);
       while (chosenNumbers.length <= 3) {
 
         let randomNumber = Math.floor(Math.random() * 36);
 
-  if(!chosenNumbers.includes(randomNumber)){
-    chosenNumbers.push(randomNumber);
-    chosenProducts.push(this.productList[randomNumber]);
+        if (!chosenNumbers.includes(randomNumber)) {
+          chosenNumbers.push(randomNumber);
+          chosenProducts.push(this.productList[randomNumber]);
+        }
       }
-    }
-    console.log(this.productList)
-    console.log("chosenproducts"+chosenProducts)
-    return chosenProducts
+      console.log(this.productList)
+      console.log("chosenproducts" + chosenProducts)
+      return chosenProducts
+    },
+    ...mapState(useCartProducts, ['cartProducts']),
+
+    breadProduct() {
+      const url = window.location.href
+      let name = url.split('/')
+      return name[4]
     }
   },
-
+  methods: {
+    ...mapActions(useCartProducts, ['addProducts'])
+  }
 }
 
 </script>
 
 <template>
   <Breadcrumbs :items="[
-    {disabled: false, text: 'Principal' , to: '/' },
-    {disabled: false, text: breadName , to: '/productlist' },
-    {disabled: false, text: 'Producto' , to: '/detailproduct' },
-    ]" />
+    { disabled: false, text: 'Principal', to: '/' },
+    { disabled: false, text: breadName, to: '/productlist' },
+    { disabled: false, text: 'Producto', to: '/detailproduct' },
+  ]" />
   <!--Info-producto:img, texto, precio-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">
     <div class="w-full h-full flex flex-col md:flex-row items-center border-blue-800 max-w-xl gap-5">
@@ -95,7 +101,7 @@ export default {
     </h1>
     <a href="https://www.instagram.com/candykoaweb/" target="_blank">
       <img class="w-8 h-auto sm:w-8 md:w-10 sm:h-auto md:h-auto ml-48 md:ml-48 lg:ml-96 lg:mt-1"
-        src="assets/icon/instagram2.jpeg" alt="Instagram" /></a>
+        src="/assets/icon/instagram2.jpeg" alt="Instagram" /></a>
   </div>
   <!--Productos recomendados + footer-->
   <div class="flex flex-col justify-center items-center gap-6">

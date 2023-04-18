@@ -31,8 +31,8 @@ export default {
         <div
           class="flex justify-end sm:items-center md:gap-10 gap-2 md:flex-row flex-col rounded-lg font-bold text-sm md:text-lg">
           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Pagar</button>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full"><a
-              href="productList.html">Seguir Comprando</a></button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full"><router-link
+              to="/">Seguir Comprando</router-link></button>
           <button @click="this.restartCart"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Vaciar
             Carrito</button>
