@@ -45,7 +45,14 @@ export default {
     console.log(this.productList)
     console.log("chosenproducts"+chosenProducts)
     return chosenProducts
-    }
+    },
+
+    breadProduct(){
+      const url = window.location.href
+      let name = url.split('/')
+      return name[4]
+    },
+
   },
 
   }
@@ -55,7 +62,7 @@ export default {
 <template>
   <Breadcrumbs :items="[
     {disabled: false, text: 'Principal' , to: '/' },
-    {disabled: false, text: 'Japón' , to: '/productlist' },
+    {disabled: false, text: breadName , to: '/productlist' },
     {disabled: false, text: 'Producto' , to: '/detailproduct' },
     ]" />
   <!--Info-producto:img, texto, precio-->
