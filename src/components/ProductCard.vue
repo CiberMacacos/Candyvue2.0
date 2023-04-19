@@ -41,9 +41,12 @@ export default {
         :src="image" :alt="name">
       <div class="flex flex-row items-center flex-end justify-end">
         <div class="flex flex-col sm:w-28 md:w-48 lg:p-4 ">
-          <router-link :to="`/detailproduct/${id}`">
+          <router-link :to="`/detailproduct/${id}`" replace>
             <h1 class="w-16 sm:w-16 md:w-auto lg:w-auto ml-2 font-bold text-left text-sm sm:text-sm ">{{ name }}</h1>
           </router-link>
+        <!--<a :href="`/detailproduct/${id}`">
+          <h1 class="w-16 sm:w-16 md:w-auto lg:w-auto ml-2 font-bold text-left text-sm sm:text-sm ">{{ name }}</h1>
+        </a>-->
           <h3 class="font-semibold text-xs sm:text-sm ml-2  mb-2">{{ price }}€</h3>
         </div>
         <div class="w-auto flex justify-end ml-3 sm:ml-0 sm:mr-4 md:mr-2 lg:ml-4">

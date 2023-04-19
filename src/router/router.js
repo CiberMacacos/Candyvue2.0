@@ -37,6 +37,18 @@ const routes = [
     name: "DetailProduct",
     component: () => import('../views/DetailProductkoa.vue')
   },
+  {
+    path: "/successpay",
+    props:true,
+    name: "SeccessPay",
+    component: () => import('../views/SuccessPay.vue')
+  },
+  {
+    path: "/errorpay",
+    props:true,
+    name: "ErrorPay",
+    component: () => import('../views/ErrorPay.vue')
+  },
 ];
 
 const router = createRouter({

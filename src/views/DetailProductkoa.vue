@@ -25,6 +25,7 @@ export default {
   beforeMount() {
     const filtered = this.productList.filter(product => product.id == this.id)
     this.data = filtered[0]
+    window.scroll(0,0)
   },
 
   computed: {
