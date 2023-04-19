@@ -20,23 +20,23 @@ export default {
 
       <div class="w-30 hover:scale-125 transition duration-100 ease-in-out">
         <a href="https://www.linkedin.com/in/mar%C3%ADa-mira-alav%C3%A9s/" target="_blank"><img
-            src="assets/compis/MaríaKoa.png" alt="Maria"></a>
+            src="/assets/compis/MaríaKoa.png" alt="Maria"></a>
       </div>
       <div class="w-30 hover:scale-125 transition duration-100 ease-in-out">
         <a href="https://www.linkedin.com/in/jorge-porta-blanco-399670199/" target="_blank"><img
-            src="assets/compis/JorgeKoa.png" alt="Jorge"></a>
+            src="/assets/compis/JorgeKoa.png" alt="Jorge"></a>
       </div>
       <div class="w-30 hover:scale-125 transition duration-100 ease-in-out">
-        <a href="https://www.linkedin.com/in/celia-taroncher/" target="_blank"><img src="assets/compis/CeliaKoa.png"
+        <a href="https://www.linkedin.com/in/celia-taroncher/" target="_blank"><img src="/assets/compis/CeliaKoa.png"
             alt="Celia"></a>
       </div>
       <div class="w-30 hover:scale-125 transition duration-100 ease-in-out">
         <a href="https://www.linkedin.com/in/miriam-alonso-hernandez-186299267/" target="_blank"><img
-            src="assets/compis/MiriamKoa.png" alt="Miriam"></a>
+            src="/assets/compis/MiriamKoa.png" alt="Miriam"></a>
       </div>
       <div class="esther hover:scale-125  transition duration-100 ease-in-out">
         <a href="https://www.linkedin.com/in/estherdiazdelaguardia/" target="_blank"><img
-            src="assets/compis/EstherKoa.png" alt="Esther"></a>
+            src="/assets/compis/EstherKoa.png" alt="Esther"></a>
       </div>
     </div>
     <Footerkoa/>

@@ -102,7 +102,7 @@ export default {
 
   <!--Anuncio novedades redes-->
   <div
-    class="bg-[url('assets/chuches/piruleta3.jpeg')] w-auto lg:w-full h-24 md:h-48 lg:h-88 bg-cover bg-no-repeat object-top flex flex-col items-center justify-center">
+    class="bg-[url('/assets/chuches/piruleta3.jpeg')] w-auto lg:w-full h-24 md:h-48 lg:h-88 bg-cover bg-no-repeat object-top flex flex-col items-center justify-center">
     <h1 class="text-white text-xs sm:text-sm md:text-xl lg:text-4xl text-center md:w-72 lg:w-96 ml-48 md:ml-88 lg:ml-96 mr-1 lg:mt-3">¡Síguenos en nuestras redes y no te pierdas las novedades!</h1>
     <a href="https://www.instagram.com/candykoaweb/" target="_blank">
       <img class="w-8 h-auto sm:w-8 md:w-10 sm:h-auto md:h-auto ml-48 md:ml-48 lg:ml-96 lg:mt-1"

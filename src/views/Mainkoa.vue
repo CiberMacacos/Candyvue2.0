@@ -49,7 +49,7 @@ export default {
         <router-link to="/productlist/japan"
           class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-900 md:h-7 md:p-5 text-sm md:text-2xl">¡Quiero
           verlo!</router-link>
-        <img src="assets/icon/mouse-click-icon.svg" class="w-6 md:hover:animate-ping" alt="Flecha">
+        <img src="/assets/icon/mouse-click-icon.svg" class="w-6 md:hover:animate-ping" alt="Flecha">
       </div>
     </div>
   </div>
@@ -60,38 +60,38 @@ export default {
     <div class="grid grid-cols-2 lg:gap-6 gap-2 md:gap-2 w-44 md:w-72 lg:w-1/2">
       <img
         class=" hidden md:block col-span-2 object-cover h-20 md:h-48 w-full lg:w-full"
-        src="assets/productos/chewchew.jpeg" alt="Hi-Chew">
+        src="/assets/productos/chewchew.jpeg" alt="Hi-Chew">
 
       <img
         class="md:hidden col-span-2 object-cover h-20 md:h-48 w-full lg:w-full"
-        src="assets/chuches/movil/hi-chew-m.webp" alt="Hi-Chew">
+        src="/assets/chuches/movil/hi-chew-m.webp" alt="Hi-Chew">
 
       <img
         class=" hidden md:block h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover"
-        src="assets/chuches/halloween.webp" alt="Chocolate">
+        src="/assets/chuches/halloween.webp" alt="Chocolate">
       <img
         class=" md:hidden h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover"
-        src="assets/chuches/movil/halloween.webp" alt="Chocolate">
+        src="/assets/chuches/movil/halloween.webp" alt="Chocolate">
       <img
         class="hidden md:block md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover"
-        src="assets/chuches/chuches.webp" alt="Moras">
+        src="/assets/chuches/chuches.webp" alt="Moras">
       <img
         class="md:hidden md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover"
-        src="assets/chuches/movil/chuches-m.webp" alt="Moras">
+        src="/assets/chuches/movil/chuches-m.webp" alt="Moras">
     </div>
     <!--Texto e iconos-->
     <div class="flex items-center w-1/2 md:w-auto">
       <ul class="flex flex-col lg:gap-28 md:gap-4 gap-2 w-full">
         <li class="flex items-center md:gap-10 gap-2">
-          <img src="assets/icon/world.webp" alt="Mundo" class="md:w-12 w-6">
+          <img src="/assets/icon/world.webp" alt="Mundo" class="md:w-12 w-6">
           <p class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">Dulces de distintas partes del mundo</p>
         </li>
         <li class="flex items-center md:gap-10 gap-2">
-          <img src="assets/icon/delivery-4.jpeg" alt="Entrega" class="md:w-12 w-6">
+          <img src="/assets/icon/delivery-4.jpeg" alt="Entrega" class="md:w-12 w-6">
           <p class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">Envíos a toda España (Canarias incluidas)</p>
         </li>
         <li class="flex items-center md:gap-10 gap-2">
-          <img src="assets/icon/oferta2.jpeg" alt="Oferta" class="md:w-12 w-6">
+          <img src="/assets/icon/oferta2.jpeg" alt="Oferta" class="md:w-12 w-6">
           <p class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">¡Regístrate y recibe ofertas y descuentos especiales!</p>
         </li>
       </ul>
@@ -105,11 +105,11 @@ export default {
     <h2 class="text-sm text center md:text-2xl lg:text-3xl font-bold text-rose-900">Lo primero eres tú.</h2>
     <div class="flex flex-row lg:w-12 md:w-10 w-6 items-center justify-center gap-8 sm:gap-10 md:gap-20 mt-4 md:mt-9">
       <!--Iconos alérgenos-->
-      <img src="assets/icon/avellana.jpeg" alt="Avellana">
-      <img src="assets/icon/azucar.webp" alt="Azúcar">
-      <img src="assets/icon/cacahuete.webp" alt="Cacahuete">
-      <img src="assets/icon/huevos.jpeg" alt="Huevos">
-      <img src="assets/icon/leche.jpeg" alt="Leche">
+      <img src="/assets/icon/avellana.jpeg" alt="Avellana">
+      <img src="/assets/icon/azucar.webp" alt="Azúcar">
+      <img src="/assets/icon/cacahuete.webp" alt="Cacahuete">
+      <img src="/assets/icon/huevos.jpeg" alt="Huevos">
+      <img src="/assets/icon/leche.jpeg" alt="Leche">
     </div>
   </div>
   <!--Sección productos recomendados-->
