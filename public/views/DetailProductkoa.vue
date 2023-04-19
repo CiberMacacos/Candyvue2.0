@@ -100,6 +100,8 @@ export default {
       </Popper>
     </div>
   </div>
+
+
   <!--Anuncio novedades redes-->
   <div
     class="bg-[url('/assets/chuches/piruleta3.jpeg')] w-auto lg:w-full h-24 md:h-48 lg:h-88 bg-cover bg-no-repeat object-top flex flex-col items-center justify-center">
@@ -108,12 +110,12 @@ export default {
       <img class="w-8 h-auto sm:w-8 md:w-10 sm:h-auto md:h-auto ml-48 md:ml-48 lg:ml-96 lg:mt-1"
         src="/assets/icon/instagram2.jpeg" alt="Instagram" /></a>
   </div>
-  <!--Productos recomendados-->
-  <div class="flex flex-col justify-center items-center m-5 gap-6 md:m-10">
+  <!--Productos recomendados + footer-->
+  <div class="flex flex-col justify-center items-center gap-6">
     <h1 class="self-start text-sm md:text-lg text-pink-800 font-bold ml-5 mt-5">Productos recomendados</h1>
     <!--Productos-->
     <div id="recomended"
-      class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16 justify-center">
+      class="flex flex-col sm:flex-col lg:flex-row lg:gap-10 gap-7 md:gap-3 md:h-96 lg:mt-5 mb-10 w-auto">
       <!--Productos-->
       <ProductCard v-if="getRandomProduct" v-for="product in getRandomProduct" :name="product.name" :id="product.id"
         :image="product.image" :price="product.price" />

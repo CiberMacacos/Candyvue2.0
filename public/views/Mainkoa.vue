@@ -47,7 +47,7 @@ export default {
       </p>
       <div class="flex flex-row justify-center items-center gap-2 md:justify-center md:items-center">
         <router-link to="/productlist/japan"
-          class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-800 md:hover:ease-linear duration-150 ease-in md:hover:scale-110 lg:hover:scale-110 md:h-7 md:p-5 text-sm md:text-2xl ">¡Quiero
+          class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-900 md:h-7 md:p-5 text-sm md:text-2xl">¡Quiero
           verlo!</router-link>
         <img src="/assets/icon/mouse-click-icon.svg" class="w-6 md:hover:animate-ping" alt="Flecha">
       </div>
@@ -59,24 +59,24 @@ export default {
     <!--Imágenes-->
     <div class="grid grid-cols-2 lg:gap-6 gap-2 md:gap-2 w-44 md:w-72 lg:w-1/2">
       <img
-        class=" hidden md:block col-span-2 object-cover h-20 md:h-48 w-full lg:w-full border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl"
+        class=" hidden md:block col-span-2 object-cover h-20 md:h-48 w-full lg:w-full"
         src="/assets/productos/chewchew.jpeg" alt="Hi-Chew">
 
       <img
-        class="md:hidden col-span-2 object-cover h-20 md:h-48 w-full lg:w-full border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl"
+        class="md:hidden col-span-2 object-cover h-20 md:h-48 w-full lg:w-full"
         src="/assets/chuches/movil/hi-chew-m.webp" alt="Hi-Chew">
 
       <img
-        class=" hidden md:block h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl"
+        class=" hidden md:block h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover"
         src="/assets/chuches/halloween.webp" alt="Chocolate">
       <img
-        class=" md:hidden h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl"
+        class=" md:hidden h-full md:h-32 h-24 w-full lg:h-60 w-120 object-cover"
         src="/assets/chuches/movil/halloween.webp" alt="Chocolate">
       <img
-        class="hidden md:block md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl"
+        class="hidden md:block md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover"
         src="/assets/chuches/chuches.webp" alt="Moras">
       <img
-        class="md:hidden md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover border-1 border-gray-100 rounded-lg shadow-lg lg:shadow-xl"
+        class="md:hidden md:h-32 h-24 w-36 lg:w-full lg:h-60 object-cover"
         src="/assets/chuches/movil/chuches-m.webp" alt="Moras">
     </div>
     <!--Texto e iconos-->
