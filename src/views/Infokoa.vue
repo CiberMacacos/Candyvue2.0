@@ -8,12 +8,11 @@ export default {
   <Headerkoa/>
   <div class=" flex flex-col text-center px-2 ">
       <p class="text-3xl p-10 text-red-600">Quiénes somos</p>
-      <p> CandyKoa es una web Española, creada para hacer felices a niños (y no tan niños), llevando a sus hogares
-        chucherías de diversas partes del mundo. <br>
+      <p class="mx-20"> ¡Bienvenidos a CandyKoa! Somos una página web española que busca llevar felicidad a niños y adultos, trayendo chucherías de diversos países del mundo directamente a sus hogares. <br>
         Con nuestra web deseamos acercarles un poco más hacia la cultura de países como Japón, México o EEUU. <br>
-        El equipo encargado de hacer la web son alumnos de la Escuela de Organización Industrial (EOI), bootcamp de
-        Programación FrontEnd, dirigido por el Sr. Jose Román (Manz). <br>
-        El equipo corporativo de CandyKoa desea que disfruten de nuestras chucherías.
+        En CandyKoa, nos apasiona acercar diferentes culturas a nuestros clientes, por lo que hemos seleccionado los dulces más populares de países como Japón, México y Estados Unidos. Queremos que puedas disfrutar de las delicias que otros lugares tienen para ofrecer sin tener que salir de tu casa.
+        Nos enorgullece contarles que nuestro equipo está compuesto por alumnos del bootcamp de Programación FrontEnd de la Escuela de Organización Industrial (EOI), dirigido por el Sr. Jose Román (Manz). Como equipo, hemos trabajado duro para crear una página web fácil de usar y atractiva, para que puedas navegar sin problemas y encontrar tus dulces favoritos.<br>
+        El equipo corporativo de CandyKoa está emocionado de poder llevar una sonrisa a sus rostros con nuestras chucherías. ¡Gracias por visitarnos y esperamos que disfrutes de nuestra selección!
       </p>
     </div>
     <div class="flex flex-row  p-10">
