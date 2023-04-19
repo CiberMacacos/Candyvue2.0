@@ -71,7 +71,7 @@ export default {
     </div>
     <div class="justify-center">
       <p class="font-bold">{{ this.data.name }}</p>
-      <p class="text-center">{{ this.data.price }} €</p>
+      <p class="text-center">{{ Number(this.data.price).toFixed(2) }} €</p>
     </div>
     <div class="bg-blue-50 w-auto md:p-4 flex flex-col items-center border-blue-800 max-w-xl hover:bg-pink-50 gap-5">
       <div class="flex flex-col justify-between p-4 leading-normal text-justify">
