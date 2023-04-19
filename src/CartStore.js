@@ -73,7 +73,6 @@ export const useCartProducts = defineStore('cart', {
             $stripe.insertAdjacentElement("afterend", res.error.message);
           }
         })
-      this.cartProducts = [];
     },
     restartCart() {
       this.cartProducts = []

@@ -27,24 +27,24 @@ const routes = [
   },
   {
     path: "/productlist/:country",
-    props:true,
+    props: true,
     name: "ProductList",
     component: () => import('../views/ProductListKoa.vue')
   },
   {
     path: "/detailproduct/:id",
-    props:true,
+    props: true,
     name: "DetailProduct",
     component: () => import('../views/DetailProductkoa.vue')
   },
   {
-    path: "/successpay",
+    path: "/success",
     props:true,
-    name: "SeccessPay",
+    name: "SuccessPay",
     component: () => import('../views/SuccessPay.vue')
   },
   {
-    path: "/errorpay",
+    path: "/error",
     props:true,
     name: "ErrorPay",
     component: () => import('../views/ErrorPay.vue')
