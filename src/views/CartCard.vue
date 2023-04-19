@@ -58,7 +58,7 @@ export default {
     <div class="flex flex-col items-center">
       <Popper class="text-pink-400" hover content="Eliminar producto">
         <button @click="this.removeProduct({ id })">
-          <img class="w-4 sm:w-6 md:w-10" src="assets/icon/basura.png" alt="papelera">
+          <img class="w-4 sm:w-6 md:w-10" src="/assets/icon/basura.png" alt="papelera">
         </button>
       </Popper>
     </div>

@@ -24,12 +24,14 @@ export default {
     <div class="mx-10 mt-10">
       <div class="bg-white w-full rounded-lg flex flex-col md:gap-8">
         <CartCard v-for="item in this.cartProducts" :id="item.id" :image="item.image" :name="item.name"
-          :price="item.price" :quantity="item.quantity" :code="item.code" :total="item.price * item.quantity" />
+          :price="item.price" :quantity="item.quantity" :code="item.code"
+          :total="Number(item.price * item.quantity).toFixed(2)" />
       </div>
       <!--Subtotal productos-->
       <div class="flex flex-col w-100% h50 gap-4 md:items-end font-bold my-4 md:m-10">
-        <div id="totalize" class="font-bold text-center text-2xl">Total: {{ this.cartProducts.reduce((acc, item) => (acc
-          += item.price * item.quantity), 0) }}€</div>
+        <div id="totalize" class="font-bold text-center text-2xl">Total: {{ this.cartProducts.reduce((acc, item) =>
+          Number((acc
+            += item.price * item.quantity)).toFixed(2), 0) }}€</div>
         <div
           class="flex justify-end sm:items-center md:gap-10 gap-2 md:flex-row flex-col rounded-lg font-bold text-sm md:text-lg">
           <Popper hover content="Ir a la pasarela de pago">
