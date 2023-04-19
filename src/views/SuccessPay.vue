@@ -6,14 +6,17 @@ export default {
   name: 'SuccessPay',
   methods: {
     ...mapActions(useCartProducts, ['restartCart'])
+  },
+  mounted() {
+    this.restartCart();
   }
 }
 </script>
 
 <template>
-  <div class="bg-blue-50 w-full h-full">
-    <div class="flex flex-col justify-center items-center mt-20 gap-4">
-      <div class="flex flex-row">
+  <div class="bg-blue-50 w-full h-full mb-5">
+    <div class="flex flex-col justify-center items-center gap-4">
+      <div class="flex flex-row mt-10">
         <img class="w-10 md:w-20" src="/assets/icon/conf1.png" alt="Confeti" />
         <img class="w-10 md:w-20" src="/assets/icon/conf2.png" alt="Confeti" />
       </div>
@@ -27,11 +30,13 @@ export default {
     </div>
     <div class="flex flex-col gap-6 md:gap-10 justify-center items-center">
       <img class="w-36 md:w-64" src="/assets/logo-letras.png" alt="Logo" />
-      <div class="flex flex-row justify-center items-center gap-4">
+      <div class="flex flex-row justify-center items-center gap-4 mb-20">
         <img src="/assets/icon/arrow_curve.png" alt="Click aquí" class="w-10 md:w-20" />
-        <router-link to="/"
-          class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full">Página
-          principal</router-link>
+        <router-link to="/">
+          <button
+            class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full">Página
+            principal</button>
+        </router-link>
       </div>
     </div>
   </div>

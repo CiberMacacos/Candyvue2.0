@@ -12,9 +12,9 @@
       <img class="w-36 md:w-64" src="/assets/logo-letras.png" alt="Logo" />
       <div class="flex flex-row justify-center items-center gap-4">
         <img src="/assets/icon/arrow_curve.png" alt="Click aquí" class="w-10 md:w-20" />
-        <a href="index.html"
-          class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full">Página
-          principal</a>
+        <router-link to="/cart"
+          class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full">Ir
+          al carrito</router-link>
       </div>
     </div>
   </div>

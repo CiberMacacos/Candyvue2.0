@@ -4,6 +4,8 @@ import Mainkoa from "../views/Mainkoa.vue"
 import Infokoa from "../views/Infokoa.vue"
 import Constructionkoa from "../views/Constructionkoa.vue"
 import Cartkoa from "../views/Cartkoa.vue"
+import SuccessPay from "../views/SuccessPay.vue"
+import ErrorPay from "../views/ErrorPay.vue"
 
 import DetailProductkoa from "../views/DetailProductkoa.vue"
 
@@ -19,6 +21,16 @@ const routes = [
     component: Infokoa,
   },
   {
+    path: "/success",
+    name: "Pago aceptado",
+    component: SuccessPay,
+  },
+  {
+    path: "/error",
+    name: "Pago rechazado",
+    component: ErrorPay,
+  },
+  {
     path: "/construction",
     name: "Construction",
     component: Constructionkoa,
@@ -30,13 +42,13 @@ const routes = [
   },
   {
     path: "/productlist/:country",
-    props:true,
+    props: true,
     name: "ProductList",
     component: () => import('../views/ProductListKoa.vue')
   },
   {
     path: "/detailproduct/:id",
-    props:true,
+    props: true,
     name: "DetailProduct",
     component: DetailProductkoa,
   },
