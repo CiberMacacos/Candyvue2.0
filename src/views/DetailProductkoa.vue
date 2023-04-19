@@ -51,12 +51,6 @@ export default {
     },
     ...mapState(useCartProducts, ['cartProducts']),
 
-    breadName(){
-      const url = window.location.href
-      let name = url.split('/')
-      return name[4]
-    },
-
     breadProduct() {
       const url = window.location.href
       let name1 = url.split('/')
@@ -71,30 +65,31 @@ export default {
 </script>
 
 <template>
+  <div v-if="data">
   <Breadcrumbs :items="[
     { disabled: false, text: 'Principal', to: '/' },
-    { disabled: false, text: breadName, to: '/productlist' },
-    { disabled: false, text: breadProduct, to: '' },
+    { disabled: false, text: data.country, to: `/productlist/${data.country}` },
+    { disabled: false, text: data.name, to: '' },
   ]"/>
   <!--Info-producto:img, texto, precio-->
   <div class="sm:w-full md:w-full flex-col items-center inline-flex justify-center md:gap-5 mb-9" id="container">
     <div class="w-full h-full flex flex-col md:flex-row items-center border-blue-800 max-w-xl gap-5">
       <div class="w-auto h-auto md:w-full md:h-auto bg-transparent items-center">
-        <img class="w-56 h-auto md:w-auto md:h-auto" :src=this.data.image alt="this.data.name">
+        <img class="w-56 h-auto md:w-auto md:h-auto" :src=data.image alt="this.data.name">
       </div>
     </div>
     <div class="justify-center">
-      <p class="font-bold">{{ this.data.name }}</p>
-      <p class="text-center">{{ Number(this.data.price).toFixed(2) }} €</p>
+      <p class="font-bold">{{ data.name }}</p>
+      <p class="text-center">{{ Number(data.price).toFixed(2) }} €</p>
     </div>
     <div class="bg-blue-50 w-auto md:p-4 flex flex-col items-center border-blue-800 max-w-xl hover:bg-pink-50 gap-5">
       <div class="flex flex-col justify-between p-4 leading-normal text-justify">
-        <p class="mb-3 font-normal text-sm md:text-2xl text-black">{{ this.data.description }}</p>
-        <p class="md:mb-3 font-normal text-sm md:text-xl text-black">Ingredientes: {{ this.data.ingredients }}</p>
-        <p class="mb-3 md:font-normal text-sm md:text-xl text-black">Alérgenos: {{ this.data.allergens }}</p>
+        <p class="mb-3 font-normal text-sm md:text-2xl text-black">{{ data.description }}</p>
+        <p class="md:mb-3 font-normal text-sm md:text-xl text-black">Ingredientes: {{ data.ingredients }}</p>
+        <p class="mb-3 md:font-normal text-sm md:text-xl text-black">Alérgenos: {{ data.allergens }}</p>
       </div>
       <Popper hover class="arrow" content="Añadir producto al carrito">
-        <button @click="this.addProduct(this.data)"><img
+        <button @click="addProduct(data)"><img
             class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer hover:invert"
             src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar"></button>
       </Popper>
@@ -119,6 +114,7 @@ export default {
         :image="product.image" :price="product.price" />
     </div>
   </div>
+</div>
 </template>
 
 <style>

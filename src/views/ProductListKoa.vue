@@ -29,12 +29,6 @@ export default {
     filterProductList() {
       return this.productList.filter(product => product.country === this.country)
     },
-
-    breadName(){
-      const url = window.location.href
-      let name = url.split('/')
-      return name[4]
-    }
   }
 }
 </script>
@@ -42,7 +36,7 @@ export default {
 <template>
   <Breadcrumbs :items="[
     { disabled: false, text: 'Principal', to: '/' },
-    { disabled: false, text: breadName , to: '' },
+    { disabled: false, text: country , to: '' },
   ]" />
   <!-- Tarjetas de Productos -->
   <div class="flex justify-center lg:justify-center">
