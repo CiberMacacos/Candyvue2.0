@@ -45,10 +45,6 @@ export default {
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Vaciar
               Carrito</button>
           </Popper>
-          <router-link to="/success">
-            <button
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Success</button>
-          </router-link>
         </div>
       </div>
     </div>

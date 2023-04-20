@@ -33,21 +33,21 @@ export default {
       <h1 class="font-bold text-sm md:text-base">Nombre</h1>
       <h2 class="sm:text-sm sm:gap4">{{ name }}</h2>
     </div>
-    <div class="flex flex-col gap-3 items-center hidden sm:block">
+    <div class="flex flex-col gap-3 justify-center items-center hidden sm:block">
       <h2 class="font-bold text-sm md:text-base">Precio</h2>
       <p class="sm:text-sm">{{ price }}€</p>
     </div>
     <div class="flex flex-col gap-3 items-center">
       <h1 class="font-bold text-sm md:text-base">Cantidad</h1>
-      <div class="flex flex-row gap-6">
+      <div class="flex flex-row justify-center items-center lg:gap-6 md:gap-4 sm:gap-4 gap-2">
         <Popper hover content="Disminuir cantidad de producto">
           <button @click="this.decreaseProduct({ id })"
-            class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">-</button>
+            class="flex justify-center bg-pink-300 lg:w-8 lg:h-8 md:w-7 md:h-7 sm:w-4 sm:h-4 w-5 h-5 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center">-</button>
         </Popper>
         <p class="sm:text-sm">{{ quantity }}</p>
         <Popper hover content="Aumentar cantidad de producto">
           <button @click="this.increaseProduct({ id })"
-            class="bg-pink-300 w-8 h-8 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center hidden sm:block">+</button>
+            class="flex justify-center bg-pink-300 lg:w-8 lg:h-8 md:w-7 md:h-7 sm:w-4 sm:h-4 w-5 h-5 hover:bg-blue-300 text-white font-bold py-2 rounded-full text-sm items-center">+</button>
         </Popper>
       </div>
     </div>
@@ -55,10 +55,10 @@ export default {
       <h2 class="font-bold text-sm md:text-base">Total</h2>
       <h2 class="sm:text-sm">{{ total }}€</h2>
     </div>
-    <div class="flex flex-col items-center">
-      <Popper class="text-pink-400" hover content="Eliminar producto">
+    <div class="flex flex-col justify-center items-center">
+      <Popper hover content="Eliminar producto">
         <button @click="this.removeProduct({ id })">
-          <img class="w-4 sm:w-6 md:w-10" src="/assets/icon/basura.png" alt="papelera">
+          <img class="w-6 sm:w-6 md:w-10" src="/assets/icon/basura.png" alt="papelera">
         </button>
       </Popper>
     </div>
