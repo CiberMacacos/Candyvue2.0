@@ -21,9 +21,9 @@ export default {
 
       while (chosenNumbers.length <= 3) {
 
-        let randomNumber = Math.floor(Math.random() * 36);
+        let randomNumber = Math.floor(Math.random() * 39);
 
-        if (!chosenNumbers.includes(randomNumber)) {
+        if (!chosenNumbers.includes(randomNumber) && chosenNumbers !== 13 && chosenNumbers !== 22 && chosenNumbers !== 30) {
           chosenNumbers.push(randomNumber);
           chosenProducts.push(this.productList[randomNumber]);
         }
@@ -38,7 +38,7 @@ export default {
 <template>
   <!--Fondo fresas-->
   <div class="bg-[url('/assets/chuches/fresa.jpeg')] bg-center lg:mt-5 md:w-auto sm:w-full md:h-72 h-36 bg-cover
-    bg-no-repeat object-top flex flex-col items-center justify-center">
+      bg-no-repeat object-top flex flex-col items-center justify-center">
     <div class="flex flex-col gap-5 md:gap-20">
       <p class="text-center font-bold lg:text-4xl md:text-2xl text-white p-1 rounded-xl bg-pink-600 bg-opacity-50">
         ¡La desconexión que necesitas a sólo un click!
