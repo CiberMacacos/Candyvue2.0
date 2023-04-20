@@ -42,8 +42,6 @@ export default {
           chosenProducts.push(this.productList[randomNumber]);
         }
       }
-      console.log(this.productList)
-      console.log("chosenproducts" + chosenProducts)
       return chosenProducts
     },
     ...mapState(useCartProducts, ['cartProducts'])
