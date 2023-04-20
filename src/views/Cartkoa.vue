@@ -36,13 +36,13 @@ export default {
             <button @click="this.payProducts"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Pagar</button>
           </Popper>
-          <Popper hover content="Ir a la página principal"><button><router-link to="/"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Seguir
-                Comprando</router-link></button></Popper>
+          <Popper hover content="Ir a la página principal">
+            <button>
+              <router-link to="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Seguir Comprando</router-link>
+            </button>
+          </Popper>
           <Popper class="text-pink-400" hover content="Eliminar todos los productos">
-            <button @click="this.restartCart"
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Vaciar
-              Carrito</button>
+            <button @click="this.restartCart" class="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:py-1 py-2 px-4 rounded-full">Vaciar Carrito</button>
           </Popper>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-blue-50 w-full h-full mb-5">
+  <div class="bg-blue-50 w-full h-full">
     <div class="flex flex-col justify-center items-center gap-4">
       <div class="flex flex-row mt-10">
         <img class="w-10 md:w-20" src="/assets/icon/conf1.png" alt="Confeti" />

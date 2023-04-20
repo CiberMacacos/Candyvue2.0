@@ -39,13 +39,11 @@ const routes = [
   },
   {
     path: "/success",
-    props:true,
     name: "SuccessPay",
     component: () => import('../views/SuccessPay.vue')
   },
   {
     path: "/error",
-    props:true,
     name: "ErrorPay",
     component: () => import('../views/ErrorPay.vue')
   },
