@@ -2,6 +2,11 @@
 export default {
   name: 'Footer',
 
+  methods: {
+    goToTop() {
+      window.scroll(0, 0);
+    },
+  },
 }
 </script>
 
@@ -19,10 +24,10 @@ export default {
           <h2 class="mb-6 text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600 uppercase">Sobre nosotros</h2>
           <ul class="">
             <li class="mb-4">
-              <router-link to="/info" class="hover:underline">Quiénes somos</router-link>
+              <router-link to="/info" class="hover:underline" @click="goToTop">Quiénes somos</router-link>
             </li>
             <li>
-              <router-link to="/productlist/mexico" class="hover:underline">Nuestros productos</router-link>
+              <router-link to="/productlist/mexico" class="hover:underline" @click="goToTop">Nuestros productos</router-link>
             </li>
           </ul>
         </div>
@@ -41,10 +46,10 @@ export default {
           <h2 class="mb-6 text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600 uppercase">Legal</h2>
           <ul class="">
             <li class="mb-4" alt="Política de privacidad">
-              <router-link to="/construction" class="hover:underline">Política de privacidad</router-link>
+              <router-link to="/construction" class="hover:underline" @click="goToTop">Política de privacidad</router-link>
             </li>
             <li class="mb-4" alt="Términos y Condiciones">
-              <router-link to="/construction" class="hover:underline">Términos y Condiciones</router-link>
+              <router-link to="/construction" class="hover:underline" @click="goToTop">Términos y Condiciones</router-link>
             </li>
           </ul>
         </div>
@@ -52,7 +57,7 @@ export default {
     </div>
     <hr class="my-6 border-blue-300 sm:mx-auto lg:my-8"/>
     <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm sm:text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline">CandyKoa™</router-link>. All Rights Reserved.</span>
+      <span class="text-sm sm:text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">© 2023 <router-link to="../Mainkoa.vue" class="hover:underline" @click="goToTop">CandyKoa™</router-link>. All Rights Reserved.</span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <a href="mailto:candykoaweb@gmail.com" target="_blank" class="text-white">
           <img class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" src="/assets/icon/gmail2.jpeg" alt="Gmail"/>

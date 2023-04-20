@@ -5,7 +5,10 @@ import { useCartProducts } from '../CartStore.js'
 export default {
   name: 'SuccessPay',
   methods: {
-    ...mapActions(useCartProducts, ['restartCart'])
+    ...mapActions(useCartProducts, ['restartCart']),
+    goToTop() {
+      window.scroll(0, 0);
+    },
   },
   mounted() {
     this.restartCart();
@@ -17,12 +20,12 @@ export default {
   <div class="bg-blue-50 w-full h-full">
     <div class="flex flex-col justify-center items-center gap-4">
       <div class="flex flex-row mt-10">
-        <img class="w-10 md:w-20" src="/assets/icon/conf1.png" alt="Confeti" />
-        <img class="w-10 md:w-20" src="/assets/icon/conf2.png" alt="Confeti" />
+        <img class="w-12 md:w-20" src="/assets/icon/conf1.png" alt="Confeti" />
+        <img class="w-12 md:w-20" src="/assets/icon/conf2.png" alt="Confeti" />
       </div>
       <h1 class="font-bold md:text-4xl">¡Enhorabuena!</h1>
       <h2 class="md:text-2xl">Tu pago se ha realizado con éxito.</h2>
-      <div class="flex flex-row gap-2">
+      <div class="flex flex-row items-center text-center gap-2 mx-2">
         <img class="w-8 md:w-10" src="/assets/icon/candy3.webp" alt="Candy" />
         <h2 class="md:text-2xl">Gracias por comprar en CandyKoa</h2>
         <img class="w-8 md:w-10" src="/assets/icon/candy3.webp" alt="Candy" />
@@ -34,7 +37,7 @@ export default {
         <img src="/assets/icon/arrow_curve.png" alt="Click aquí" class="w-10 md:w-20" />
         <router-link to="/">
           <button
-            class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full">Página principal</button>
+            class="bg-red-100 lg:hover:bg-pink-800 lg:hover:text-white md:p-5 md:text-2xl lg:text-2xl p-3 rounded-full" @click="goToTop">Página principal</button>
         </router-link>
       </div>
     </div>
