@@ -65,8 +65,8 @@ export const useCartProducts = defineStore('cart', {
         .redirectToCheckout({
           lineItems: lines,
           mode: "payment",
-          successUrl: "https://curious-truffle-ce9ba8.netlify.app/success.html",
-          cancelUrl: "https://curious-truffle-ce9ba8.netlify.app/cancel.html",
+          successUrl: "https://store.candykoa.com/success",
+          cancelUrl: "https://store.candykoa.com/error",
         })
         .then((res) => {
           if (res.error) {

@@ -7,7 +7,6 @@ import { mapActions,mapState } from 'pinia'
 
 export default{
  async created() {
-  console.log("holaaaa")
     await this.getData()
    },
 

@@ -2,6 +2,7 @@
 import { mapActions } from 'pinia';
 import { useCartProducts } from '../CartStore.js';
 import Popper from 'vue3-popper';
+
 export default {
   name: 'CartCard',
   components: { Popper },

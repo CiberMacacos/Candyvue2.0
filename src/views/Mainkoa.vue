@@ -2,10 +2,11 @@
 import ProductCard from '../components/ProductCard.vue'
 import { useProductStore } from '../productsStore';
 import { mapState } from 'pinia';
+
 export default {
   name: 'Home',
 
-  components: {ProductCard},
+  components: { ProductCard },
   data() {
     return {
     }
@@ -31,7 +32,7 @@ export default {
     console.log(this.productList)
     console.log("chosenproducts"+chosenProducts)
     return chosenProducts
-    }
+    },
   },
 
 }

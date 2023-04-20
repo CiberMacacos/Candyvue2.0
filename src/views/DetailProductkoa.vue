@@ -80,14 +80,14 @@ export default {
       </div>
     </div>
     <div class="justify-center">
-      <p class="font-bold">{{ data.name }}</p>
-      <p class="text-center">{{ Number(data.price).toFixed(2) }} €</p>
+      <p class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">{{ data.name }}</p>
+      <p class="text-2xl text-center font-bold">{{ Number(data.price).toFixed(2) }} €</p>
     </div>
     <div class="bg-blue-50 w-auto md:p-4 flex flex-col items-center border-blue-800 max-w-xl hover:bg-pink-50 gap-5">
       <div class="flex flex-col justify-between p-4 leading-normal text-justify">
-        <p class="mb-3 font-normal text-sm md:text-2xl text-black">{{ data.description }}</p>
-        <p class="md:mb-3 font-normal text-sm md:text-xl text-black">Ingredientes: {{ data.ingredients }}</p>
-        <p class="mb-3 md:font-normal text-sm md:text-xl text-black">Alérgenos: {{ data.allergens }}</p>
+        <p class="mb-3 font-normal text-sm sm:text-md md:text-lg lg:text-xl text-black">{{ data.description }}</p>
+        <p class="md:mb-3 font-normal text-sm sm:text-md md:text-lg lg:text-xl text-black"><strong>Ingredientes:</strong> {{ data.ingredients }}</p>
+        <p class="mb-3 font-normal text-sm sm:text-md md:text-lg lg:text-xl text-black"><strong>Alérgenos:</strong> {{ data.allergens }}</p>
       </div>
       <Popper hover class="arrow" content="Añadir producto al carrito">
         <button @click="addProduct(data)"><img
