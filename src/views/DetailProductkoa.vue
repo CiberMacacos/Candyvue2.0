@@ -46,8 +46,6 @@ export default {
           chosenProducts.push(this.productList[randomNumber]);
         }
       }
-      console.log(this.productList)
-      console.log("chosenproducts" + chosenProducts)
       return chosenProducts
     },
     ...mapState(useCartProducts, ['cartProducts']),
@@ -89,7 +87,7 @@ export default {
         <p class="md:mb-3 font-normal text-sm sm:text-md md:text-lg lg:text-xl text-black"><strong>Ingredientes:</strong> {{ data.ingredients }}</p>
         <p class="mb-3 font-normal text-sm sm:text-md md:text-lg lg:text-xl text-black"><strong>Alérgenos:</strong> {{ data.allergens }}</p>
       </div>
-      <Popper hover class="arrow" content="Añadir producto al carrito">
+      <Popper hover class="z-10" content="Añadir producto al carrito">
         <button @click="addProduct(data)"><img
             class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer hover:invert"
             src="/assets/icon/carrito-de-compra-anadir.png" alt="Comprar"></button>

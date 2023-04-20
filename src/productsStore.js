@@ -17,12 +17,6 @@ export const useProductStore = defineStore('productList', {
       }
       )
     },
-    // getters:{
-
-    // filterProductList(country){
-    //   return this.productList.filter(product => product.country==='Japan')
-    //   }
-    // }
   }
 }
 );
