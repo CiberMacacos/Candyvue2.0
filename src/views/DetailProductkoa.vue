@@ -116,7 +116,8 @@ export default {
           :name="product.name"
           :id="product.id"
           :image="product.image"
-          :price="Number(product.price).toFixed(2)" />
+          :price="Number(product.price).toFixed(2)"
+          :code="product.code" />
         </div>
       </div>
     </div>

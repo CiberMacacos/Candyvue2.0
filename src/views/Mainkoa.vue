@@ -10,6 +10,9 @@ export default {
   data() {
     return {};
   },
+  mounted() {
+    window.scroll(0, 0);
+  },
   computed: {
     ...mapState(useProductStore, ['productList']),
     getRandomProduct() {
@@ -44,7 +47,8 @@ export default {
       </p>
       <div class="flex flex-row justify-center items-center gap-2 md:justify-center md:items-center">
         <router-link to="/productlist/japan"
-          class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-800 md:hover:ease-linear duration-150 ease-in md:hover:scale-110 lg:hover:scale-110 md:h-7 md:p-5 text-sm md:text-2xl ">¡Quiero verlo!
+          class="flex md:items-center bg-pink-600 rounded-lg p-1 font-bold text-white md:hover:bg-pink-800 md:hover:ease-linear duration-150 ease-in md:hover:scale-110 lg:hover:scale-110 md:h-7 md:p-5 text-sm md:text-2xl ">¡Quiero
+          verlo!
         </router-link>
         <img src="/assets/icon/mouse-click-icon.svg" class="w-6 md:hover:animate-ping" alt="Flecha" />
       </div>
@@ -81,22 +85,30 @@ export default {
       <ul class="flex flex-col lg:gap-28 md:gap-4 gap-2 w-full">
         <li class="flex items-center md:gap-10 gap-2">
           <img src="/assets/icon/world.webp" alt="Mundo" class="md:w-12 w-6" />
-          <p class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">Dulces de distintas partes del mundo</p>
+          <p
+            class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">
+            Dulces de distintas partes del mundo</p>
         </li>
         <li class="flex items-center md:gap-10 gap-2">
           <img src="/assets/icon/delivery-4.jpeg" alt="Entrega" class="md:w-12 w-6" />
-          <p  class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">Envíos a toda España (Canarias incluidas)</p>
+          <p
+            class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">
+            Envíos a toda España (Canarias incluidas)</p>
         </li>
         <li class="flex items-center md:gap-10 gap-2">
           <img src="/assets/icon/oferta2.jpeg" alt="Oferta" class="md:w-12 w-6" />
-          <p class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">¡Regístrate y recibe ofertas y descuentos especiales!</p>
+          <p
+            class="lg:text-3xl md:text-xl text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-purple-600">
+            ¡Regístrate y recibe ofertas y descuentos especiales!</p>
         </li>
       </ul>
     </div>
   </div>
   <!--Sección alérgenos-->
-  <div class="bg-red-100 bg-opacity-40 w-full md:h-60 h-12 flex flex-col justify-center items-center gap-3 md:gap-9 py-32 md:py-52">
-    <h1 class="text-sm text-center m-5 md:text-xl lg:text-2xl">¿Tienes algún tipo de alergia o intolerancia? Pensamos en ti. Busca las etiquetas en todos nuestros productos.</h1>
+  <div
+    class="bg-red-100 bg-opacity-40 w-full md:h-60 h-12 flex flex-col justify-center items-center gap-3 md:gap-9 py-32 md:py-52">
+    <h1 class="text-sm text-center m-5 md:text-xl lg:text-2xl">¿Tienes algún tipo de alergia o intolerancia? Pensamos en
+      ti. Busca las etiquetas en todos nuestros productos.</h1>
     <h2 class="text-sm text center md:text-2xl lg:text-3xl font-bold text-rose-900">Lo primero eres tú.</h2>
     <div class="flex flex-row lg:w-12 md:w-10 w-6 items-center justify-center gap-8 sm:gap-10 md:gap-20 mt-4 md:mt-9">
       <!--Iconos alérgenos-->
@@ -111,16 +123,12 @@ export default {
   <!--Título-->
   <div class="flex flex-col justify-center items-center m-5 gap-6 md:m-10">
     <h1 class="self-start text-sm md:text-lg md:text-pink-800 font-bold">Productos recomendados</h1>
-    <div id="recomended" class="grid w-full justify-center md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16"
+    <div id="recomended"
+      class="grid w-full justify-center md:grid-cols-2 lg:grid-cols-4 gap-5 md:w-5/6 md:gap-24 lg:w-auto lg:gap-10 py-5 md:py-12 lg:py-16"
       v-if="getRandomProduct">
       <!--Productos-->
-      <ProductCard
-      v-for="product in getRandomProduct"
-      :key="product.id"
-      :name="product.name"
-      :id="product.id"
-      :image="product.image"
-      :price="Number(product.price).toFixed(2)" />
+      <ProductCard v-for="product in getRandomProduct" :key="product.id" :name="product.name" :id="product.id"
+        :image="product.image" :price="Number(product.price).toFixed(2)" :code="product.code" />
     </div>
   </div>
 </template>
